@@ -65,9 +65,9 @@
                                             </td>
                                             <td class="align-top">
                                                 <div class="ms-auto text-center">
-                                                    <a class="btn btn-link btn-sm py-0 text-info px-3 mb-0" href="javascript:;"><i class="far fa-eye" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-link btn-sm py-0 text-danger px-3 mb-0" href="javascript:;"><i class="far fa-trash-alt" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-link btn-sm py-0 text-dark px-3 mb-0" href="javascript:;"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-link btn-sm py-0 text-info px-2 mb-0" href="<?= base_url() ?>adminpelatihan/detail/"><i class="far fa-eye" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-link btn-sm py-0 text-danger px-2 mb-0" href="javascript:;"><i class="far fa-trash-alt" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" href="javascript:;"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
