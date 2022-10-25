@@ -18,21 +18,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="<?= base_url() ?>/assets/img/main-logo.svg">
   <title>
     <?= $title ?> - TAX SESSION
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <!-- <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" /> -->
 
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   
   <link id="pagestyle" href="<?= base_url() ?>assets/css/admin/argon-dashboard.css" rel="stylesheet" />
+  <link id="pagestyle" href="<?= base_url() ?>assets/css/admin/custom.css" rel="stylesheet" />
+
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
@@ -40,7 +39,7 @@
   <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
     <div class="sidenav-header h-auto">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0 py-3 d-flex justify-content-center align-items-center" href="<?= base_url() ?>admindashboard">
+      <a class="navbar-brand m-0 py-3 d-flex justify-content-center align-items-center" href="<?= base_url() ?>adminberanda">
         <img src="<?= base_url() ?>assets/img/main-logo.svg" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-2 font-weight-bold">Dashboard Admin</span>
       </a>
@@ -48,8 +47,9 @@
     <hr class="horizontal dark my-2 mt-0">
     <div class="collapse navbar-collapse w-auto h-75" id="sidenav-collapse-main">
       <ul class="navbar-nav">
+
         <li class="nav-item">
-          <a class="nav-link active" href="<?= base_url() ?>admindashboard">
+          <a class="nav-link <?php if($this->uri->segment(1) == "adminberanda"){echo "active";} ?>" href="<?= base_url() ?>adminberanda">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fas fa-home text-primary text-lg" style="top:1px;"></i> 
             </div>
@@ -58,12 +58,12 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link " href="<?= base_url() ?>adminpelatihan">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="fas fa-book text-primary text-lg" style="top:1px;"></i> 
-            </div>
-            <span class="nav-link-text ms-1">Pelatihan</span>
-          </a>
+            <a class="nav-link <?php if($this->uri->segment(1) == "adminpelatihan"){echo "active";} ?>" href="<?= base_url() ?>adminpelatihan">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="fas fa-book text-primary text-lg" style="top:1px;"></i> 
+                </div>
+                <span class="nav-link-text ms-1">Pelatihan</span>
+            </a>
         </li>
 
         <li class="nav-item">
@@ -102,7 +102,7 @@
       <div class="container-fluid py-1 px-3 mt-3">
         <nav aria-label="breadcrumb ">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-0 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="text-white" href="javascript:;"><i class="fa fa-home cursor-pointer text-lg"></i></a></li>
+            <li class="breadcrumb-item text-sm"><a class="text-white" href="<?= base_url() ?>adminberanda"><i class="fa fa-home cursor-pointer text-lg"></i></a></li>
             <li class="breadcrumb-item text-sm text-white active opacity-10" aria-current="page">Dashboard</li>
           </ol>
         </nav>
