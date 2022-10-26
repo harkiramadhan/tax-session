@@ -20,9 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="<?= base_url() ?>/assets/img/main-logo.svg">
-  <title>
-    <?= $title ?> - TAX SESSION
-  </title>
+  <title><?= $title ?> - TAX SESSION</title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 
@@ -32,11 +30,8 @@
   <link id="pagestyle" href="<?= base_url() ?>assets/css/admin/argon-dashboard.css" rel="stylesheet" />
   <link id="pagestyle" href="<?= base_url() ?>assets/css/admin/custom.css" rel="stylesheet" />
 
-    <!-- Include stylesheet -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
-
-
+  <!-- Include stylesheet -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
@@ -54,7 +49,7 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link <?php if($this->uri->segment(1) == "adminberanda"){echo "active";} ?>" href="<?= base_url() ?>adminberanda">
+          <a class="nav-link <?= ($this->uri->segment(1) == "admin/beranda") ? 'active' : '' ?>" href="<?= site_url('admin/beranda') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fas fa-home text-primary text-lg" style="top:1px;"></i> 
             </div>
@@ -63,7 +58,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link <?php if($this->uri->segment(1) == "adminpelatihan"){echo "active";} ?>" href="<?= base_url() ?>adminpelatihan">
+            <a class="nav-link <?= ($this->uri->segment(1) == "admin/pelatihan") ? 'active' : '' ?>" href="<?= site_url('admin/pelatihan') ?>">
                 <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="fas fa-book text-primary text-lg" style="top:1px;"></i> 
                 </div>
@@ -72,7 +67,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link " href="<?= base_url() ?>adminbanner">
+          <a class="nav-link <?= ($this->uri->segment(1) == "admin/banners") ? 'active' : '' ?>" href="<?= site_url('admin/banners') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fa fa-slideshare text-primary text-lg" style="top:1px;"></i> 
             </div>
@@ -81,7 +76,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link " href="<?= base_url() ?>adminlanding">
+          <a class="nav-link <?= ($this->uri->segment(1) == "admin/landing") ? 'active' : '' ?>" href="<?= site_url('admin/landing') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fa fa-file text-primary text-lg" style="top:1px;"></i> 
             </div>
@@ -90,7 +85,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link " href="<?= base_url() ?>adminpengaturan">
+          <a class="nav-link <?= ($this->uri->segment(1) == "admin/settings") ? 'active' : '' ?>" href="<?= site_url('admin/settings') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fa fa-cog text-primary text-lg" style="top:1px;"></i> 
             </div>
