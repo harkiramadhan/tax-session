@@ -39,7 +39,7 @@
   <!-- Alert Code -->
   <!-- <div class="alert alert-success alert-dismissible fade show position-absolute top-0 end-0 border-0 d-flex me-4 mt-3 ms-4"  role="alert">
     <span class="alert-icon"><i class="fa fa-bell me-2 text-white"></i></span>
-    <span class="alert-text text-white mt-0"><strong>Success!</strong> This is a success alert—check it out!</span>
+    <span class="alert-text text-white mt-0 font-weight-bold"><strong>Berhasil !</strong> - Menambahkan Pelatihan</span>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
       <i class="fa fa-times position-absolute text-white top-0 pe-2" style="margin-top: 20px; margin-right: 100px;"></i>
     </button>
@@ -58,7 +58,7 @@
     <div class="collapse navbar-collapse w-auto h-75" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link <?= ($this->uri->segment(1) == "admin/beranda") ? 'active' : '' ?>" href="<?= site_url('admin/beranda') ?>">
+          <a class="nav-link <?= ($this->uri->segment(2) == "beranda") ? 'active' : '' ?>" href="<?= site_url('admin/beranda') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fas fa-home text-primary text-lg" style="top:1px;"></i> 
             </div>
@@ -67,7 +67,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link <?= ($this->uri->segment(1) == "admin/pelatihan") ? 'active' : '' ?>" href="<?= site_url('admin/pelatihan') ?>">
+            <a class="nav-link <?= ($this->uri->segment(2) == "pelatihan") ? 'active' : '' ?>" href="<?= site_url('admin/pelatihan') ?>">
                 <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="fas fa-book text-primary text-lg" style="top:1px;"></i> 
                 </div>
@@ -76,7 +76,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($this->uri->segment(1) == "admin/banners") ? 'active' : '' ?>" href="<?= site_url('admin/banners') ?>">
+          <a class="nav-link <?= ($this->uri->segment(2) == "banners") ? 'active' : '' ?>" href="<?= site_url('admin/banners') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fa fa-slideshare text-primary text-lg" style="top:1px;"></i> 
             </div>
@@ -85,7 +85,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($this->uri->segment(1) == "admin/landing") ? 'active' : '' ?>" href="<?= site_url('admin/landing') ?>">
+          <a class="nav-link <?= ($this->uri->segment(2) == "landing") ? 'active' : '' ?>" href="<?= site_url('admin/landing') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fa fa-file text-primary text-lg" style="top:1px;"></i> 
             </div>
@@ -94,7 +94,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($this->uri->segment(1) == "admin/settings") ? 'active' : '' ?>" href="<?= site_url('admin/settings') ?>">
+          <a class="nav-link <?= ($this->uri->segment(2) == "settings") ? 'active' : '' ?>" href="<?= site_url('admin/settings') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fa fa-cog text-primary text-lg" style="top:1px;"></i> 
             </div>

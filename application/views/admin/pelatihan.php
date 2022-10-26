@@ -49,7 +49,7 @@
                                                             <i class="fa fa-calendar me-2 text-dark" aria-hidden="true"></i>
                                                             <span class="text-dark">12 - 13 September 2022</span>
                                                         </p>
-                                                        <a href="<?= site_url('admin/pelatihan/peserta') ?>"" class="text-xs font-weight-bold mb-0">
+                                                        <a href="<?= site_url('admin/pelatihan/peserta') ?>" class="text-xs font-weight-bold mb-0">
                                                             <i class="fa fa-user me-2 text-success" aria-hidden="true"></i>
                                                             <span class="text-dark">200 Peserta</span>
                                                             <i class="fa fa-arrow-right text-success ms-2" aria-hidden="true"></i>

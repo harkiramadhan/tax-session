@@ -88,8 +88,8 @@
                                             </td>
                                             <td class="align-top">
                                                 <div class="ms-auto text-center">
-                                                    <a class="btn btn-dark btn-sm py-1 text-white px-2 mb-0" href="<?= site_url('admin/pelatihan/detail') ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="<?= site_url('admin/pelatihan/hapus') ?>""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                                    <button class="btn btn-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                    <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/6282112905550" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -112,13 +112,13 @@
                                             </td>
                                             <td class="align-top text-center">
                                                 <div class="ms-auto text-center">
-                                                    <button class="btn btn-outline-danger btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-times-circle me-1" aria-hidden="true"></i>File</button>
+                                                    <button class="btn btn-outline-danger btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#buktiPembayaran"><i class="fa fa-times-circle me-1" aria-hidden="true"></i>File</button>
                                                 </div>
                                             </td>
                                             <td class="align-top">
                                                 <div class="ms-auto text-center">
-                                                    <a class="btn btn-dark btn-sm py-1 text-white px-2 mb-0" href="<?= site_url('admin/pelatihan/detail') ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="<?= site_url('admin/pelatihan/hapus') ?>""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                                    <button class="btn btn-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                    <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/6282112905550" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -177,6 +177,70 @@
                         </div>
                         <div class="modal-footer pb-0 d-flex justify-content-start">
                             <button type="button" class="btn btn-dark w-100 mb-0">SIMPAN</button>
+                            <button type="button" class="btn btn-link text-secondary w-100 mb-2" data-bs-dismiss="modal">TUTUP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Data Peserta -->
+            <div class="modal fade" id="dataPeserta" tabindex="-1" aria-labelledby="dataPeserta" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 class="modal-title" id="dataPeserta">DATA PESERTA</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-gray-100">
+                            <div class="row">
+            					<div class="col-lg-12">
+            						<div class="form-group mb-2">
+            							<label class="form-control-label" for="input-nama">Nama Lengkap <span class="text-danger">*</span></label>
+            							<input type="text" name="title" class="form-control" placeholder="Tulis nama lengkapmu" value="" required="">
+            						</div>
+            					</div>
+            					<div class="col-lg-6">
+            						<div class="form-group mb-2">
+            							<label class="form-control-label" for="input-nama">No HP/WA <span class="text-danger">*</span></label>
+            							<input type="text" name="title" class="form-control" placeholder="0821xxxxxx" value="" required="">
+            						</div>
+            					</div>
+            					<div class="col-lg-6">
+            						<div class="form-group mb-2">
+            							<label class="form-control-label" for="input-nama">Email Aktif <span class="text-danger">*</span></label>
+            							<input type="text" name="title" class="form-control" placeholder="email@gmail.com" value="" required="">
+            						</div>
+            					</div>
+            					<div class="col-lg-6">
+            						<div class="form-group mb-2">
+            							<label for="input-aksi">Jenis Kelamin <span class="text-danger">*</span></label>
+            							<select class="form-control" name="#" required="">
+            								<option value="">- Pilih -</option>
+            								<option value="2">Laki - Laki</option>
+            								<option value="3">Perempuan</option>
+            							</select>
+            						</div>
+            					</div>
+            					<div class="col-lg-6">
+            						<div class="form-group mb-2">
+            							<label for="input-aksi">Pendidikan Terahir <span class="text-danger">*</span></label>
+            							<select class="form-control" name="#" required="">
+            								<option value="">- Pilih -</option>
+            								<option value="2">Laki - Laki</option>
+            								<option value="3">Perempuan</option>
+            							</select>
+            						</div>
+            					</div>
+            					<div class="col-lg-6">
+            						<div class="form-group mb-2">
+            							<label for="input-aksi">Tanggal Lahir <span class="text-danger">*</span></label>
+            							<input type="date" name="title" class="form-control" placeholder="Berapa tanggal lahirmu" value="" required="">
+            						</div>
+            					</div>
+            				</div>
+                        </div>
+                        <div class="modal-footer pb-0 d-flex justify-content-start">
+                            <button type="button" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
                             <button type="button" class="btn btn-link text-secondary w-100 mb-2" data-bs-dismiss="modal">TUTUP</button>
                         </div>
                     </div>
