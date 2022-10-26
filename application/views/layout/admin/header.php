@@ -103,7 +103,7 @@
         <nav aria-label="breadcrumb ">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-0 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="text-white" href="<?= base_url() ?>adminberanda"><i class="fa fa-home cursor-pointer text-lg"></i></a></li>
-            <li class="breadcrumb-item text-sm text-white active opacity-10" aria-current="page">Dashboard</li>
+            <li class="breadcrumb-item text-sm text-white active opacity-10" aria-current="page"><?= @$title ?></li>
           </ol>
         </nav>
         <div class="collapse navbar-collapse justify-content-end" id="navbar">
