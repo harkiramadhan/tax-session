@@ -83,7 +83,7 @@
                                             </td>
                                             <td class="align-top text-center">
                                                 <div class="ms-auto text-center">
-                                                    <button class="btn btn-outline-success btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-check-circle me-1" aria-hidden="true"></i>File</button>
+                                                    <button class="btn btn-outline-success btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#buktiPembayaran"><i class="fa fa-check-circle me-1" aria-hidden="true"></i>File</button>
                                                 </div>
                                             </td>
                                             <td class="align-top">
@@ -139,12 +139,12 @@
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- Modal Bukti Pembayaran -->
+            <div class="modal fade" id="buktiPembayaran" tabindex="-1" aria-labelledby="buktiPembayaran" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h6 class="modal-title" id="exampleModalLabel">BUKTI PEMBAYARAN</h6>
+                            <h6 class="modal-title" id="buktiPembayaran">BUKTI PEMBAYARAN</h6>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body bg-gray-100">
