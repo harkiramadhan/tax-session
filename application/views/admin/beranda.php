@@ -10,7 +10,7 @@
                       12
                     </h3>
                     <p class="mb-0">
-                        <a class="mb-0" href="">Selengkapnya 
+                        <a class="mb-0 icon-move-right text-warning" href="">Selengkapnya 
                             <i class="fa fa-arrow-right ms-3" aria-hidden="true"></i>
                         </a>
                     </p>
@@ -34,7 +34,7 @@
                       12
                     </h3>
                     <p class="mb-0">
-                        <a class="mb-0" href="">Selengkapnya
+                        <a class="mb-0  icon-move-right text-warning" href="">Selengkapnya
                           <i class="fa fa-arrow-right ms-3" aria-hidden="true"></i>
                         </a>
                     </p>
@@ -71,9 +71,9 @@
                     </div>
                   </div>
                   <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
+                    <a href="<?= site_url('admin/pelatihan/peserta') ?>" class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
                         <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-                    </button>
+                    </a>
                   </div>
                 </li>
                 <li class="list-group-item border d-flex justify-content-between ps-3 mb-3 py-3 border-radius-lg">
@@ -90,14 +90,14 @@
                     </div>
                   </div>
                   <div class="d-flex">
-                    <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
+                    <a href="<?= site_url('admin/pelatihan/peserta') ?>" class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
                         <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-                    </button>
+                    </a>
                   </div>
                 </li>
               </ul>
                 <p class="mb-0 text-center">
-                    <a class="mb-0 text-warning" href="">Tampilkan semua
+                    <a class="mb-0 text-warning icon-move-right" href="<?= site_url('admin/pelatihan/') ?>">Tampilkan semua
                         <i class="fa fa-arrow-right ms-2" aria-hidden="true"></i>
                     </a>
                 </p>

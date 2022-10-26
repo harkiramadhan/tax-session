@@ -35,19 +35,28 @@
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
+
+  <!-- Alert Code -->
+  <!-- <div class="alert alert-success alert-dismissible fade show position-absolute top-0 end-0 border-0 d-flex me-4 mt-3 ms-4"  role="alert">
+    <span class="alert-icon"><i class="fa fa-bell me-2 text-white"></i></span>
+    <span class="alert-text text-white mt-0"><strong>Success!</strong> This is a success alert—check it out!</span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+      <i class="fa fa-times position-absolute text-white top-0 pe-2" style="margin-top: 20px; margin-right: 100px;"></i>
+    </button>
+  </div> -->
+
   <div class="min-height-300 bg-primary position-absolute w-100"></div>
   <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 " id="sidenav-main">
     <div class="sidenav-header h-auto">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0 py-3 d-flex justify-content-center align-items-center" href="<?= base_url() ?>adminberanda">
-        <img src="<?= base_url() ?>assets/img/main-logo.svg" class="navbar-brand-img h-100" alt="main_logo">
+      <a class="navbar-brand m-0 py-3 d-flex justify-content-center align-items-center" href="<?= site_url('admin/beranda') ?>">
+        <img src="<?= base_url() ?>/assets/img/main-logo.svg" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-2 font-weight-bold">Dashboard Admin</span>
       </a>
     </div>
     <hr class="horizontal dark my-2 mt-0">
     <div class="collapse navbar-collapse w-auto h-75" id="sidenav-collapse-main">
       <ul class="navbar-nav">
-
         <li class="nav-item">
           <a class="nav-link <?= ($this->uri->segment(1) == "admin/beranda") ? 'active' : '' ?>" href="<?= site_url('admin/beranda') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -102,7 +111,7 @@
       <div class="container-fluid py-1 px-3 mt-3">
         <nav aria-label="breadcrumb ">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-0 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="text-white" href="<?= base_url() ?>adminberanda"><i class="fa fa-home cursor-pointer text-lg"></i></a></li>
+            <li class="breadcrumb-item text-sm"><a class="text-white" href="<?= site_url('admin/beranda') ?>"><i class="fa fa-home cursor-pointer text-lg"></i></a></li>
             <li class="breadcrumb-item text-sm text-white active opacity-10" aria-current="page"><?= @$title ?></li>
           </ol>
         </nav>

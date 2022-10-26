@@ -7,7 +7,7 @@
                                 <h6 class="mb-0">DAFTAR PELATIHAN</h6>
                                 </div>
                                 <div class="col-6 text-end">
-                                <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;<span class="d-lg-inline d-none">Pelatihan</span></a>
+                                <a class="btn bg-gradient-dark mb-0" href="<?= site_url('admin/pelatihan/tambah') ?>"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;<span class="d-lg-inline d-none">Pelatihan</span></a>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                                             <i class="fa fa-calendar me-2 text-dark" aria-hidden="true"></i>
                                                             <span class="text-dark">12 - 13 September 2022</span>
                                                         </p>
-                                                        <a href="#" class="text-xs font-weight-bold mb-0">
+                                                        <a href="<?= site_url('admin/pelatihan/peserta') ?>"" class="text-xs font-weight-bold mb-0">
                                                             <i class="fa fa-user me-2 text-success" aria-hidden="true"></i>
                                                             <span class="text-dark">200 Peserta</span>
                                                             <i class="fa fa-arrow-right text-success ms-2" aria-hidden="true"></i>
@@ -65,9 +65,9 @@
                                             </td>
                                             <td class="align-top">
                                                 <div class="ms-auto text-center">
-                                                    <a class="btn btn-link btn-sm py-0 text-info px-2 mb-0" href="<?= base_url() ?>adminpelatihan/detail/"><i class="far fa-eye" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-link btn-sm py-0 text-danger px-2 mb-0" href="javascript:;"><i class="far fa-trash-alt" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" href="javascript:;"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-link btn-sm py-0 text-info px-2 mb-0" href="<?= site_url('admin/pelatihan/detail') ?>"><i class="far fa-eye" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-link btn-sm py-0 text-danger px-2 mb-0" href="<?= site_url('admin/pelatihan/hapus') ?>""><i class="far fa-trash-alt" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" href="<?= site_url('admin/pelatihan/ubah') ?>""><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -78,7 +78,7 @@
                                                 <div class="border rounded w-100 p-4 text-center text-sm mt-2">
                                                     Belum ada data pelatihan
                                                     <br>
-                                                    <a class="btn btn-outline-dark mb-0 mt-3" href="javascript:;"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;<span class="d-lg-inline d-none">Pelatihan</span></a>
+                                                    <a class="btn btn-outline-dark mb-0 mt-3" href="<?= site_url('admin/pelatihan/tambah') ?>"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;<span class="d-lg-inline d-none">Pelatihan</span></a>
                                                 </div>
                                             </td>
                                         </tr>
