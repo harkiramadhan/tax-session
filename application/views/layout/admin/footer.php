@@ -18,22 +18,30 @@
             </div>
         </main>
         <!--   Core JS Files   -->
-        <script src="<?= base_url() ?>assets/js/core/popper.min.js"></script>
-        <script src="<?= base_url() ?>assets/js/core/bootstrap.min.js"></script>
-        <script src="<?= base_url() ?>assets/js/plugins/perfect-scrollbar.min.js"></script>
-        <script src="<?= base_url() ?>assets/js/plugins/smooth-scrollbar.min.js"></script>
-        <script src="<?= base_url() ?>assets/js/plugins/chartjs.min.js"></script>
+        <script src="<?= base_url('assets/js/core/popper.min.js') ?>"></script>
+        <script src="<?= base_url('assets/js/core/bootstrap.min.js') ?>"></script>
+        <script src="<?= base_url('assets/js/plugins/perfect-scrollbar.min.js') ?>"></script>
+        <script src="<?= base_url('assets/js/plugins/smooth-scrollbar.min.js') ?>"></script>
+        <script src="<?= base_url('assets/js/plugins/chartjs.min.js') ?>"></script>
 
         <!-- Quils JS -->
         <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
         <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
-        <script>
-            var quill = new Quill('#editor', {
-                theme: 'snow'
-            });
-        </script>
+        <!-- Github buttons -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+        <script src="<?= base_url('assets/js/argon-dashboard.min.js?v=2.0.4') ?>"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
+        <?php 
+            if(@$ajax) {
+                foreach(@$ajax as $a){
+                    echo "<script src='".base_url('assets/js/custom/' . $a).".js'></script>";
+                }
+            }
+                
+        ?>
         <script>
             var win = navigator.platform.indexOf('Win') > -1;
             if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -46,15 +54,10 @@
 
         <!-- datatable -->
         <script>
-            $(document).ready(function () {
-                $('#example').DataTable();
-            });
+            // $(document).ready(function () {
+            //     $('#example').DataTable();
+            // });
         </script>
-
-        <!-- Github buttons -->
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
-        <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="<?= base_url() ?>assets/js/argon-dashboard.min.js?v=2.0.4"></script>
     </body>
 
 </html>
