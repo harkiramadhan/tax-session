@@ -27,7 +27,10 @@ class Pelatihan extends CI_Controller {
 	function index(){
         $var = [
 			'title' => 'Pelatihan',
-			'pelatihan' => $this->M_Pelatihan->getAll()
+			'pelatihan' => $this->M_Pelatihan->getAll(),
+			'ajax' => [
+				'pelatihan'
+			]
 		];
 
 		$this->load->view('layout/admin/header', $var);
@@ -39,7 +42,7 @@ class Pelatihan extends CI_Controller {
 		$var = [
 			'title' => 'Tambah Pelatihan Baru',
 			'ajax'	=> [
-				'pelatihan'
+				'pelatihan-add'
 			]
 		];
 		$this->load->view('layout/admin/header', $var);
@@ -59,6 +62,34 @@ class Pelatihan extends CI_Controller {
 		$this->load->view('layout/admin/header', $var);
 		$this->load->view('admin/pelatihan-ubah', $var);
 		$this->load->view('layout/admin/footer', $var);
+	}
+
+	function delete(){
+		$id = $this->input->get('id', TRUE);
+		$pelatihan = $this->M_Pelatihan->getById($id);
+
+		?>
+		<div class="modal-header">
+			<h6 class="modal-title" id="modal-title-notification">Hapus Pelatihan <?= $pelatihan->judul ?></h6>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<div class="py-3 text-center">
+				<i class="ni ni-bell-55 ni-3x"></i>
+				<h5 class="text-gradient text-danger mt-4">Apakah Anda Yakin Menghapus Pelatihan!</h5>
+				<h4><strong><?= $pelatihan->judul ?></strong>.</h4>
+			</div>
+		</div>
+		<form action="<?= site_url('admin/pelatihan/remove') ?>" method="post">
+		<input type="hidden" name="id" value="<?= $id ?>">
+		<div class="modal-footer">
+			<button type="button" class="btn btn-white" data-bs-dismiss="modal">Batal</button>
+			<button type="submit" class="btn btn-danger ml-auto">Ya, Hapus</button>
+		</div>
+		</form>
+		<?php
 	}
 
 	function participant(){
@@ -142,9 +173,27 @@ class Pelatihan extends CI_Controller {
 		];
 		$this->db->where('id', $id)->update('pelatihan', $dataUpdate);
 		if($this->db->affected_rows() > 0){
-			$this->session->set_flashdata('success', "Pelatihan Berhasil Di Simpan");
+			$this->session->set_flashdata('success', "Menyimpan Pelatihan");
 		}else{
-			$this->session->set_flashdata('error', "Pelatihan Gagal Di Simpan");
+			$this->session->set_flashdata('error', "Menyimpan Pelatihan");
+		}
+
+		redirect($_SERVER['HTTP_REFERER']);
+	}
+
+	function remove(){
+		$id = $this->input->post('id', TRUE);
+		$pelatihan = $this->M_Pelatihan->getById($id);
+
+		if($pelatihan->cover_img != NULL){
+			@unlink('./uploads/pelatihan/' . @$pelatihan->cover_img);
+		}
+
+		$this->db->where('id', $id)->delete('pelatihan');
+		if($this->db->affected_rows() > 0){
+			$this->session->set_flashdata('success', "Menghapus Pelatihan");
+		}else{
+			$this->session->set_flashdata('error', "Menghapus Pelatihan");
 		}
 
 		redirect($_SERVER['HTTP_REFERER']);

@@ -14,15 +14,18 @@
             <div class="card-body px-0 pt-0 pb-2">
                 <div class="table-responsive p-0">
                     <table class="table align-items-center mb-0 display" id="example" style="width:100%">
-                        <thead class="bg-light opacity-5">
-                            <tr>
-                                <th class="text-uppercase text-dark text-xxs text-center font-weight-bolder opacity-10" width="1px">#</th>
-                                <th class="text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Pelatihan</th>
-                                <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Status</th>
-                                <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Harga</th>
-                                <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Aksi</th>
-                            </tr>
-                        </thead>
+                        <?php if($pelatihan->num_rows() > 0):  ?>
+                            <thead class="bg-light opacity-5">
+                                <tr>
+                                    <th class="text-uppercase text-dark text-xxs text-center font-weight-bolder opacity-10" width="1px">#</th>
+                                    <th class="text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Pelatihan</th>
+                                    <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Status</th>
+                                    <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Harga</th>
+                                    <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Discount</th>
+                                    <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">Aksi</th>
+                                </tr>
+                            </thead>
+                        <?php endif; ?>
                         <tbody>
 
                             <?php 
@@ -62,16 +65,27 @@
                                         </div>
                                     </td>
                                     <td class="align-top text-center text-sm">
-                                        <span class="badge badge-sm bg-gradient-success"><?= ($row->status == 1) ? 'Aktif' : 'Non Aktif' ?></span>
+                                        <?php 
+                                            if($row->status == 1):
+                                                $status = '<span class="badge badge-sm bg-gradient-success">Aktif</span>';
+                                            else:
+                                                $status = '<span class="badge badge-sm bg-gradient-info">Draft</span>';
+                                            endif;
+
+                                            echo $status;
+                                        ?>
                                     </td>
                                     <td class="align-top text-center">
                                         <span class="text-secondary text-xs font-weight-bold"><?= rupiah($row->harga) ?></span>
                                     </td>
+                                    <td class="align-top text-center">
+                                        <span class="text-secondary text-xs font-weight-bold"><?= ($row->diskon != 0) ? $row->diskon." %" : ' - ' ?></span>
+                                    </td>
                                     <td class="align-top">
                                         <div class="ms-auto text-center">
-                                            <a class="btn btn-link btn-sm py-0 text-info px-2 mb-0" href="<?= site_url('admin/pelatihan/' . $row->id) ?>"><i class="far fa-eye" aria-hidden="true"></i></a>
-                                            <a class="btn btn-link btn-sm py-0 text-danger px-2 mb-0" href="<?= site_url('admin/pelatihan/hapus') ?>""><i class="far fa-trash-alt" aria-hidden="true"></i></a>
-                                            <a class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" href="<?= site_url('admin/pelatihan/edit/' . $row->id) ?>""><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                                            <a class="btn btn-link btn-sm py-0 text-info px-2 mb-0" href="<?= site_url('pelatihan/' . $row->flag) ?>" target="__BLANK"><i class="far fa-eye" aria-hidden="true"></i></a>
+                                            <button type="button" class="btn btn-link btn-sm py-0 text-danger px-2 mb-0 btn-remove" data-id="<?= $row->id ?>"><i class="far fa-trash-alt" aria-hidden="true"></i></button>
+                                            <a class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" href="<?= site_url('admin/pelatihan/edit/' . $row->id) ?>"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -93,6 +107,15 @@
                     </table>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modal-remove" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+        <div class="modal-content remove-content">
+            
         </div>
     </div>
 </div>
