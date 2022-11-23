@@ -89,45 +89,51 @@
 
         <li class="nav-item">
 					<a data-bs-toggle="collapse" href="#applicationsExamples" class="nav-link collapsed" aria-controls="applicationsExamples" role="button" aria-expanded="false">
-					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-						<i class="fas fa-file text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
-					</div>
-					<span class="nav-link-text ms-1">Landing Page</span>
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fas fa-file text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+            </div>
+            <span class="nav-link-text ms-1">Landing Page</span>
 					</a>
-					<div class="collapse" id="applicationsExamples" style="">
+					<div class="collapse <?= ($this->uri->segment(2) == "landing") ? 'show' : '' ?>" id="applicationsExamples" style="">
 						<ul class="nav ms-0">
-
               <li class="nav-item">
-                <a class="nav-link <?= ($this->uri->segment(2) == "banners") ? 'active' : '' ?>" href="<?= site_url('admin/banners') ?>">
+                <a class="nav-link <?= ($this->uri->segment(3) == "banners") ? 'active' : '' ?>" href="<?= site_url('admin/landing/banner') ?>">
                   <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                       <i class="fa fa-slideshare text-primary text-lg" style="top:1px;"></i> 
                   </div>
                   <span class="nav-link-text ms-1">Banners</span>
                 </a>
               </li>
-              
 							<li class="nav-item">
-								<a class="nav-link py-2  " href="http://localhost/tanaman-pangan/admin/partner">
+								<a class="nav-link py-2 <?= ($this->uri->segment(3) == "patner") ? 'active' : '' ?>" href="<?= site_url('admin/landing/patner') ?>">
 									<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-										<i class="fas fa-handshake text-dark text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+										<i class="fas fa-handshake text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
 									</div>
 									<span class="sidenav-normal"> Patner </span>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link py-2  " href="http://localhost/tanaman-pangan/admin/testimoni">
+								<a class="nav-link py-2 <?= ($this->uri->segment(3) == "benefit") ? 'active' : '' ?>" href="<?= site_url('admin/landing/benefit') ?>">
 								<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-									<i class="fas fa-star text-dark text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+									<i class="fas fa-cog text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
 								</div>
-								<span class="sidenav-normal"> Testimoni </span>
+								<span class="sidenav-normal"> Benefit </span>
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link py-2  " href="http://localhost/tanaman-pangan/admin/kegiatan">
+								<a class="nav-link py-2 <?= ($this->uri->segment(3) == "faq") ? 'active' : '' ?>" href="<?= site_url('admin/landing/faq') ?>">
 								<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-									<i class="fas fa-cog text-dark text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+									<i class="fas fa-cog text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
 								</div>
-								<span class="sidenav-normal"> Kalender Kegiatan </span>
+								<span class="sidenav-normal"> FAQ </span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link py-2 <?= ($this->uri->segment(3) == "testimoni") ? 'active' : '' ?>" href="<?= site_url('admin/landing/testimoni') ?>">
+								<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+									<i class="fas fa-star text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+								</div>
+								<span class="sidenav-normal"> Testimoni </span>
 								</a>
 							</li>
 						</ul>
@@ -135,7 +141,7 @@
 				</li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($this->uri->segment(2) == "settings") ? 'active' : '' ?>" href="<?= site_url('admin/settings') ?>">
+          <a class="nav-link <?= ($this->uri->segment(2) == "pengaturan") ? 'active' : '' ?>" href="<?= site_url('admin/pengaturan') ?>">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="fa fa-cog text-primary text-lg" style="top:1px;"></i> 
             </div>
