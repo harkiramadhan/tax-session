@@ -88,22 +88,51 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?= ($this->uri->segment(2) == "banners") ? 'active' : '' ?>" href="<?= site_url('admin/banners') ?>">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="fa fa-slideshare text-primary text-lg" style="top:1px;"></i> 
-            </div>
-            <span class="nav-link-text ms-1">Banners</span>
-          </a>
-        </li>
+					<a data-bs-toggle="collapse" href="#applicationsExamples" class="nav-link collapsed" aria-controls="applicationsExamples" role="button" aria-expanded="false">
+					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+						<i class="fas fa-file text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+					</div>
+					<span class="nav-link-text ms-1">Landing Page</span>
+					</a>
+					<div class="collapse" id="applicationsExamples" style="">
+						<ul class="nav ms-0">
 
-        <li class="nav-item">
-          <a class="nav-link <?= ($this->uri->segment(2) == "landing") ? 'active' : '' ?>" href="<?= site_url('admin/landing') ?>">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="fa fa-file text-primary text-lg" style="top:1px;"></i> 
-            </div>
-            <span class="nav-link-text ms-1">Landing Page</span>
-          </a>
-        </li>
+              <li class="nav-item">
+                <a class="nav-link <?= ($this->uri->segment(2) == "banners") ? 'active' : '' ?>" href="<?= site_url('admin/banners') ?>">
+                  <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                      <i class="fa fa-slideshare text-primary text-lg" style="top:1px;"></i> 
+                  </div>
+                  <span class="nav-link-text ms-1">Banners</span>
+                </a>
+              </li>
+              
+							<li class="nav-item">
+								<a class="nav-link py-2  " href="http://localhost/tanaman-pangan/admin/partner">
+									<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+										<i class="fas fa-handshake text-dark text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+									</div>
+									<span class="sidenav-normal"> Patner </span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link py-2  " href="http://localhost/tanaman-pangan/admin/testimoni">
+								<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+									<i class="fas fa-star text-dark text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+								</div>
+								<span class="sidenav-normal"> Testimoni </span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link py-2  " href="http://localhost/tanaman-pangan/admin/kegiatan">
+								<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+									<i class="fas fa-cog text-dark text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
+								</div>
+								<span class="sidenav-normal"> Kalender Kegiatan </span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
 
         <li class="nav-item">
           <a class="nav-link <?= ($this->uri->segment(2) == "settings") ? 'active' : '' ?>" href="<?= site_url('admin/settings') ?>">
@@ -113,7 +142,6 @@
             <span class="nav-link-text ms-1">Pengaturan</span>
           </a>
         </li>
-
       </ul>
     </div>
   </aside>

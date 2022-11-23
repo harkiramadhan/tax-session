@@ -110,8 +110,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="modal fade" id="modal-remove" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
     <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
         <div class="modal-content remove-content">
@@ -119,3 +117,4 @@
         </div>
     </div>
 </div>
+
