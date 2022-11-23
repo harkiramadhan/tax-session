@@ -81,10 +81,10 @@
 				</div>
 				<div class="modal-body bg-gray-100">
 					<div class="row">
-					<div class="col-lg-12">
-						<div class="mb-2 mt-2 text-center">
-							<img src="http://localhost/tax-session/uploads/pelatihan/b6bf8464f52f204a2220dd05ef6c341f.jpg" class="img-fluid img-center shadow rounded" style="max-height: 250px" id="image-preview">
-						</div>
+						<div class="col-lg-12">
+							<div class="mb-2 mt-2 text-center">
+								<img src="http://localhost/tax-session/uploads/pelatihan/b6bf8464f52f204a2220dd05ef6c341f.jpg" class="img-fluid img-center shadow rounded" style="max-height: 250px" id="image-preview">
+							</div>
 							<div class="form-group">
 								<label class="form-control-label" for="input-gambar">Patner Logo
 								<span class="text-danger">*</span></label>

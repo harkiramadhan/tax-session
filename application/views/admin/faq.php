@@ -4,12 +4,12 @@
 				<div class="card-header pb-4">
 					<div class="row">
 						<div class="col-6 d-flex align-items-center">
-							<h6 class="mb-0">DAFTAR PATNER AKTIF</h6>
+							<h6 class="mb-0">DAFTAR FAQ AKTIF</h6>
 						</div>
 						<div class="col-6 text-end">
-							<button class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#tambahPatner">
+							<button class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#tambahFaq">
 								<i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;
-								<span class="d-lg-inline d-none">Patner</span>
+								<span class="d-lg-inline d-none">Pertanyaan</span>
 							</button>
 						</div>
 					</div>
@@ -22,7 +22,7 @@
 									<th class="text-uppercase text-dark text-xxs text-center font-weight-bolder opacity-10"
 										width="1px">#</th>
 									<th class="text-uppercase text-dark text-xxs font-weight-bolder opacity-10">
-										Patner</th>
+										Pertanyaan</th>
 									<th
 										class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">
 										Status</th>
@@ -43,13 +43,6 @@
 											</div>
 											<div class="d-flex flex-column justify-content-center">
 												<h6 class="mb-2 text-sm wrap-table-argon">Tax Session</h6>
-												<a href="http://localhost/tax-session/admin/pelatihan/peserta"
-													class="text-xs font-weight-bold mb-0">
-													<i class="fa fa-link me-2 text-success" aria-hidden="true"></i>
-													<span class="text-dark">Link tujuan</span>
-													<i class="fa fa-arrow-right text-success ms-2"
-														aria-hidden="true"></i>
-												</a>
 											</div>
 										</div>
 									</td>
@@ -58,7 +51,7 @@
 									<td class="align-top">
 										<div class="ms-auto text-center">
 											<button type="button" class="btn btn-link btn-sm py-0 text-danger px-2 mb-0 btn-remove" data-id="5"><i class="far fa-trash-alt" aria-hidden="true"></i></button>
-											<button class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" data-bs-toggle="modal" data-bs-target="#tambahPatner"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+											<button class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" data-bs-toggle="modal" data-bs-target="#tambahFaq"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
 										</div>
 									</td>
 								</tr>
@@ -72,47 +65,37 @@
 
 
 	<!-- Modal Tambah Banner -->
-	<div class="modal fade" id="tambahPatner" tabindex="-1" aria-labelledby="tambahPatner" aria-hidden="true">
+	<div class="modal fade" id="tambahFaq" tabindex="-1" aria-labelledby="tambahFaq" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h6 class="modal-title" id="tambahPatner">TAMBAH PATNER</h6>
+					<h6 class="modal-title" id="tambahFaq">TAMBAH PERTANYAAN</h6>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body bg-gray-100">
 					<div class="row">
-					<div class="col-lg-12">
-						<div class="mb-2 mt-2 text-center">
-							<img src="http://localhost/tax-session/uploads/pelatihan/b6bf8464f52f204a2220dd05ef6c341f.jpg" class="img-fluid img-center shadow rounded" style="max-height: 250px" id="image-preview">
-						</div>
-							<div class="form-group">
-								<label class="form-control-label" for="input-gambar">Patner Logo
-								<span class="text-danger">*</span></label>
-								<div class="mb-3">
-									<input class="form-control" type="file" name="file" id="image-source" onchange="previewImage()">
+						<div class="col-lg-12">
+							<div class="col-lg-12">
+								<div class="form-group mb-2">
+									<label class="form-control-label" for="input-nama">Pertanyaan <span class="text-danger">*</span></label>
+									<input type="text" name="" class="form-control" placeholder="Tulis nama patner" value="" required="">
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-12">
-							<div class="form-group mb-2">
-								<label class="form-control-label" for="input-nama">Nama Patner <span class="text-danger">*</span></label>
-								<input type="text" name="" class="form-control" placeholder="Tulis nama patner" value="" required="">
+							<div class="col-lg-12">
+								<div class="form-group mb-2">
+									<label class="form-control-label" for="input-nama">Jawaban <span class="text-danger">*</span></label>
+									<textarea name="deskripsi" class="form-control font-weight-bold text-muted" cols="30" rows="5" required=""></textarea>
+								</div>
 							</div>
-						</div>
-						<div class="col-lg-12">
-							<div class="form-group mb-2">
-								<label class="form-control-label" for="input-nama">Link tujuan <span class="text-danger">*</span></label>
-								<input type="text" name="" class="form-control" placeholder="Cantumkan link pada kolom" value="" required="">
-							</div>
-						</div>
-						<div class="col-lg-12">
-							<div class="form-group mb-2">
-								<label for="input-aksi">Status <span class="text-danger">*</span></label>
-								<select class="form-control" name="#" required="">
-									<option value="">- Pilih -</option>
-									<option value="2">Aktif</option>
-									<option value="3">Draft</option>
-								</select>
+							<div class="col-lg-12">
+								<div class="form-group mb-2">
+									<label for="input-aksi">Status <span class="text-danger">*</span></label>
+									<select class="form-control" name="#" required="">
+										<option value="">- Pilih -</option>
+										<option value="2">Aktif</option>
+										<option value="3">Draft</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
