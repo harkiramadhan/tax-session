@@ -88,7 +88,7 @@
                                             </td>
                                             <td class="align-top">
                                                 <div class="ms-auto text-center">
-                                                    <button class="btn btn-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                    <button class="btn bg-gradient-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                                     <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/6282112905550" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                                 </div>
                                             </td>
@@ -117,7 +117,7 @@
                                             </td>
                                             <td class="align-top">
                                                 <div class="ms-auto text-center">
-                                                    <button class="btn btn-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                    <button class="btn bg-gradient-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                                     <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/6282112905550" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                                 </div>
                                             </td>
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                         <div class="modal-footer pb-0 d-flex justify-content-start">
-                            <button type="button" class="btn btn-dark w-100 mb-0">SIMPAN</button>
+                            <button type="button" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
                             <button type="button" class="btn btn-link text-secondary w-100 mb-2" data-bs-dismiss="modal">TUTUP</button>
                         </div>
                     </div>

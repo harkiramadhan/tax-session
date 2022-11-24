@@ -94,10 +94,14 @@
             </div>
             <span class="nav-link-text ms-1">Landing Page</span>
 					</a>
-					<div class="collapse <?= ($this->uri->segment(2) == "landing") ? 'show' : '' ?>" id="applicationsExamples" style="">
+					<div class="collapse <?= (
+              $this->uri->segment(2) == "banners" ||
+              $this->uri->segment(2) == "partner" ||
+              $this->uri->segment(2) == "faq"
+            ) ? 'show' : '' ?>" id="applicationsExamples" style="">
 						<ul class="nav ms-0">
               <li class="nav-item">
-                <a class="nav-link <?= ($this->uri->segment(3) == "banners") ? 'active' : '' ?>" href="<?= site_url('admin/landing/banner') ?>">
+                <a class="nav-link <?= ($this->uri->segment(2) == "banners") ? 'active' : '' ?>" href="<?= site_url('admin/banners') ?>">
                   <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                       <i class="fa fa-slideshare text-primary text-lg" style="top:1px;"></i> 
                   </div>
@@ -105,11 +109,11 @@
                 </a>
               </li>
 							<li class="nav-item">
-								<a class="nav-link py-2 <?= ($this->uri->segment(3) == "patner") ? 'active' : '' ?>" href="<?= site_url('admin/landing/patner') ?>">
+								<a class="nav-link py-2 <?= ($this->uri->segment(2) == "partner") ? 'active' : '' ?>" href="<?= site_url('admin/partner') ?>">
 									<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 										<i class="fas fa-handshake text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
 									</div>
-									<span class="sidenav-normal"> Patner </span>
+									<span class="sidenav-normal"> Partner </span>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -121,7 +125,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link py-2 <?= ($this->uri->segment(3) == "faq") ? 'active' : '' ?>" href="<?= site_url('admin/landing/faq') ?>">
+								<a class="nav-link py-2 <?= ($this->uri->segment(2) == "faq") ? 'active' : '' ?>" href="<?= site_url('admin/faq') ?>">
 								<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 									<i class="fas fa-cog text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
 								</div>
