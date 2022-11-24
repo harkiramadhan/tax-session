@@ -8,7 +8,7 @@
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">TOTAL PELATIHAN</p>
                     <h3 class="font-weight-bolder mb-3"><?= $pelatihan->num_rows() ?></h3>
                     <p class="mb-0">
-                        <a class="mb-0 icon-move-right text-warning" href="">Selengkapnya 
+                        <a class="mb-0 icon-move-right text-warning" href="<?= site_url('admin/pelatihan/') ?>">Selengkapnya 
                             <i class="fa fa-arrow-right ms-3" aria-hidden="true"></i>
                         </a>
                     </p>
@@ -27,12 +27,12 @@
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-uppercase font-weight-bold">TOTAL PESERTA</p>
+                    <p class="text-sm mb-0 text-uppercase font-weight-bold">TOTAL SELURUH PESERTA</p>
                     <h3 class="font-weight-bolder mb-3">
                       12
                     </h3>
                     <p class="mb-0">
-                        <a class="mb-0  icon-move-right text-warning" href="">Selengkapnya
+                        <a class="mb-0  icon-move-right text-warning" href="<?= site_url('admin/pelatihan/') ?>">Selengkapnya
                           <i class="fa fa-arrow-right ms-3" aria-hidden="true"></i>
                         </a>
                     </p>
@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12">
           <div class="card">
             <div class="card-header p-3">
                 <p class="text-sm mb-0 text-uppercase font-weight-bold">PELATIHAN BERLANGSUNG</p>
