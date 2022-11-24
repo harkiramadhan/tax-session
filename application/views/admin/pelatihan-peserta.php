@@ -50,7 +50,10 @@
                                             <th class="text-uppercase text-dark text-xxs text-center font-weight-bolder opacity-10" width="1px">
                                                 #</th>
                                             <th class="text-uppercase text-dark text-xxs font-weight-bolder opacity-10">
-                                                Nama</th>
+                                                Nama</th> 
+                                            <th
+                                                class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">
+                                                ID</th>
                                             <th
                                                 class="text-center text-uppercase text-dark text-xxs font-weight-bolder opacity-10">
                                                 Pembayaran</th>
@@ -71,6 +74,10 @@
                                             </td>
                                             <td class="align-items-center text-sm">
                                                 <span>Alfian Rahmatullah</span>
+                                            </td>
+
+                                            <td class="align-items-center text-sm text-center">
+                                                <span>#012191292</span>
                                             </td>
                                             <td class="align-top">
                                                 <div class="text-sm d-flex justify-content-center align-items-center">
@@ -101,6 +108,10 @@
                                             <td class="align-items-center text-sm">
                                                 <span>Harki Ramadhan</span>
                                             </td>
+
+                                            <td class="align-items-center text-sm text-center">
+                                                <span>#012191292</span>
+                                            </td>
                                             <td class="align-top text-sm">
                                                 <div class="d-flex justify-content-center align-items-center">
                                                     <span class="badge badge-sm bg-gradient-danger me-2">Belum</span>
@@ -125,7 +136,7 @@
 
                                         <!-- Jika data pelatihan kosong -->
                                         <tr>
-                                            <td colspan="5">
+                                            <td colspan="6">
                                                 <div class="border rounded w-100 p-4 text-center text-sm mt-2">
                                                     Belum ada peserta
                                                 </div>
