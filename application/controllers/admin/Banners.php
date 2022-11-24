@@ -42,65 +42,53 @@ class Banners extends CI_Controller {
 		$banners = $this->M_Banners->getById($id);
 		?>
 			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="modalTambahBanner">Edit Banner</h1>
+				<h6 class="modal-title" id="tambahBanner">EDIT BANNER</h6>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
-			<div class="modal-body">
-				<form action="<?= site_url('admin/banners/update/' . $id) ?>" enctype="multipart/form-data" method="POST">
-					<div class="text-center">
-						<?php if($banners->img): ?>
-							<img src="<?= base_url('uploads/banners/' . $banners->img) ?>" class="img-fluid img-center shadow rounded mb-5" style="max-height: 250px" id="image-preview2">
-						<?php else: ?>
-							<img src="" class="img-fluid img-center shadow rounded d-none" style="max-height: 250px" id="image-preview2">
-						<?php endif; ?>
+			<form action="<?= site_url('admin/banners/update/' . $id) ?>" enctype="multipart/form-data" method="post">
+			<div class="modal-body bg-gray-100">
+				<div class="row">
+				<div class="col-lg-12">
+					<div class="mb-2 mt-2 text-center">
+						<img src="<?= base_url('uploads/banners/' . $banners->img) ?>" class="img-fluid img-center shadow rounded" style="max-height: 250px" id="image-preview2">
 					</div>
-
-					<div class="row d-flex align-items-center form-group">
-						<div class="col-md-4">
-							<p class="text-muted font-weight-bold mb-0">Judul</p>
-						</div>
-						<div class="col-md-8">
-							<input type="text" name="judul" class="form-control font-weight-bold text-muted" value="<?= $banners->judul ?>">
+						<div class="form-group">
+							<label class="form-control-label" for="input-gambar">Banner
+							<span class="text-danger">*</span></label>
+							<div class="mb-3">
+								<input class="form-control" type="file" name="img" id="image-source2" onchange="previewImage2()">
+							</div>
 						</div>
 					</div>
-
-					<div class="row d-flex align-items-center form-group">
-						<div class="col-md-4">
-							<p class="text-muted font-weight-bold mb-0">Gambar</p>
-						</div>
-						<div class="col-md-8">
-							<input class="form-control" type="file" name="img" id="image-source2" value="<?= base_url('uploads/banners/' . $banners->img) ?>" onchange="previewImage2()">
+					<div class="col-lg-12">
+						<div class="form-group mb-2">
+							<label class="form-control-label" for="input-nama">Judul <span class="text-danger">*</span></label>
+							<input type="text" name="judul" class="form-control" placeholder="Tulis judul banner" value="<?= $banners->judul ?>" required="">
 						</div>
 					</div>
-
-					<div class="row d-flex align-items-center form-group">
-						<div class="col-md-4">
-							<p class="text-muted font-weight-bold mb-0">Link</p>
-						</div>
-						<div class="col-md-8">
-							<input type="text" name="link" class="form-control font-weight-bold text-muted" value="<?= $banners->link ?>">
+					<div class="col-lg-12">
+						<div class="form-group mb-2">
+							<label class="form-control-label" for="input-nama">Link tujuan <span class="text-danger">*</span></label>
+							<input type="text" name="link" class="form-control" placeholder="Cantumkan link pada kolom" value="<?= $banners->link ?>" required="">
 						</div>
 					</div>
-
-					<div class="row d-flex align-items-center form-group">
-						<div class="col-md-4">
-							<p class="text-muted font-weight-bold mb-0">Status</p>
-						</div>
-						<div class="col-md-8">
-							<select class="form-control form-control-alternative me-3" name="status">
-								<option value="" selected="" disabled>Pilih</option>
+					<div class="col-lg-12">
+						<div class="form-group mb-2">
+							<label for="input-aksi">Status <span class="text-danger">*</span></label>
+							<select class="form-control" name="status" required="">
+								<option value="">- Pilih -</option>
 								<option <?= ($banners->status == 1) ? 'selected' : '' ?> value="1">Aktif</option>
 								<option <?= ($banners->status == 2) ? 'selected' : '' ?> value="2">Draft</option>
 							</select>
 						</div>
 					</div>
-
-					<div class="text-right">
-						<button type="submit" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
-						<button data-bs-dismiss="modal" type="button" class="btn btn-transparant shadow-none w-100 mb-0">KEMBALI</button>
-					</div>
-				</form>
+				</div>
 			</div>
+			<div class="modal-footer pb-0 d-flex justify-content-start">
+				<button type="submit" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
+				<button type="button" class="btn btn-link text-secondary w-100 mb-2" data-bs-dismiss="modal">TUTUP</button>
+			</div>
+			</form>
 
 			<script>
 				function previewImage2() {

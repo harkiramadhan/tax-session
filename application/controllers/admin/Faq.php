@@ -33,45 +33,43 @@ class Faq extends CI_Controller {
 
 		?>
 			<div class="modal-header">
-				<h1 class="modal-title fs-5" id="modalFAQ">Edit Pertanyaan</h1>
+				<h6 class="modal-title" id="tambahFaq">EDIT PERTANYAAN</h6>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
-			<div class="modal-body">
-				<form action="<?= site_url('admin/faq/update/' . $id) ?>" method="POST">
-					<div class="row d-flex align-items-center form-group">
-						<div class="col-md-4">
-							<p class="text-muted font-weight-bold mb-0">Pertanyaan</p>
+			<form action="<?= site_url('admin/faq/update/' . $id) ?>" method="post">
+			<div class="modal-body bg-gray-100">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="col-lg-12">
+							<div class="form-group mb-2">
+								<label class="form-control-label" for="input-nama">Pertanyaan <span class="text-danger">*</span></label>
+								<input type="text" name="question" class="form-control" placeholder="Tulis nama patner" value="<?= $faq->question ?>" required="">
+							</div>
 						</div>
-						<div class="col-md-8">
-							<input type="text" name="question" class="form-control font-weight-bold text-muted" value="<?= $faq->question ?>" required>
+						<div class="col-lg-12">
+							<div class="form-group mb-2">
+								<label class="form-control-label" for="input-nama">Jawaban <span class="text-danger">*</span></label>
+								<textarea name="answer" class="form-control font-weight-bold text-muted" cols="30" rows="5" required=""><?= $faq->answer ?></textarea>
+							</div>
 						</div>
-					</div>
-					<div class="row d-flex align-items-center form-group">
-						<div class="col-md-4">
-							<p class="text-muted font-weight-bold mb-0">Jawaban</p>
-						</div>
-						<div class="col-md-8">
-							<input type="text" name="answer" class="form-control font-weight-bold text-muted" value="<?= $faq->answer ?>" required>
-						</div>
-					</div>
-					<div class="row d-flex align-items-center form-group">
-						<div class="col-md-4">
-							<p class="text-muted font-weight-bold mb-0">Status</p>
-						</div>
-						<div class="col-md-8">
-							<select class="form-control form-control-alternative me-3" name="status" required>
-								<option value="" selected="" disabled>Pilih</option>
-								<option <?= ($faq->status == 1) ? 'selected' : '' ?> value="1">Aktif</option>
-								<option <?= ($faq->status == 2) ? 'selected' : '' ?> value="2">Draft</option>
-							</select>
+						<div class="col-lg-12">
+							<div class="form-group mb-2">
+								<label for="input-aksi">Status <span class="text-danger">*</span></label>
+								<select class="form-control" name="status" required="">
+									<option value="">- Pilih -</option>
+									<option <?= ($faq->status == 1) ? 'selected' : '' ?> value="1">Aktif</option>
+									<option <?= ($faq->status == 2) ? 'selected' : '' ?> value="2">Draft</option>
+								</select>
+							</div>
 						</div>
 					</div>
-					<div class="text-right">
-						<button type="submit" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
-						<button data-bs-dismiss="modal" type="button" class="btn btn-transparant shadow-none w-100 mb-0">KEMBALI</button>
-					</div>
-				</form>
+				</div>
 			</div>
+			<div class="modal-footer pb-0 d-flex justify-content-start">
+				<button type="submit" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
+				<button type="button" class="btn btn-link text-secondary w-100 mb-2" data-bs-dismiss="modal">TUTUP</button>
+			</div>
+			</form>
 		<?php
 	}
 
