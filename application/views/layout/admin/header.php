@@ -98,7 +98,8 @@
               $this->uri->segment(2) == "banners" ||
               $this->uri->segment(2) == "partner" ||
               $this->uri->segment(2) == "faq" ||
-              $this->uri->segment(2) == "testimoni"
+              $this->uri->segment(2) == "testimoni" ||
+              $this->uri->segment(2) == "benefit"
             ) ? 'show' : '' ?>" id="applicationsExamples" style="">
 						<ul class="nav ms-0">
               <li class="nav-item">
@@ -118,7 +119,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link py-2 <?= ($this->uri->segment(3) == "benefit") ? 'active' : '' ?>" href="<?= site_url('admin/landing/benefit') ?>">
+								<a class="nav-link py-2 <?= ($this->uri->segment(2) == "benefit") ? 'active' : '' ?>" href="<?= site_url('admin/benefit') ?>">
 								<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 									<i class="fas fa-cog text-primary text-lg opacity-10" style="top: 0px;" aria-hidden="true"></i>
 								</div>

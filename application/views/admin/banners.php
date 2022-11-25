@@ -81,10 +81,10 @@
 			<form action="<?= site_url('admin/bannersa/create') ?>" enctype="multipart/form-data" method="post">
 			<div class="modal-body bg-gray-100">
 				<div class="row">
-				<div class="col-lg-12">
-					<div class="mb-2 mt-2 text-center">
-						<img src="#" class="img-fluid img-center shadow rounded d-none" style="max-height: 250px" id="image-preview">
-					</div>
+					<div class="col-lg-12">
+						<div class="mb-2 mt-2 text-center">
+							<img src="#" class="img-fluid img-center shadow rounded d-none" style="max-height: 250px" id="image-preview">
+						</div>
 						<div class="form-group">
 							<label class="form-control-label" for="input-gambar">Banner
 							<span class="text-danger">*</span></label>
@@ -110,8 +110,8 @@
 							<label for="input-aksi">Status <span class="text-danger">*</span></label>
 							<select class="form-control" name="status" required="">
 								<option value="">- Pilih -</option>
-								<option value="2">Aktif</option>
-								<option value="3">Draft</option>
+								<option value="1">Aktif</option>
+								<option value="2">Draft</option>
 							</select>
 						</div>
 					</div>
