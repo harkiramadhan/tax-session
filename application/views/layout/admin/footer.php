@@ -33,6 +33,7 @@
 
         <!-- Github buttons -->
         <script async defer src="https://buttons.github.io/buttons.js"></script>
+        
         <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="<?= base_url('assets/js/argon-dashboard.min.js?v=2.0.4') ?>"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
