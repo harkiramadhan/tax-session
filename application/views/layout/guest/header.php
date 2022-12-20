@@ -66,7 +66,7 @@
                             <p class="text-uppercase text-white">We provide tons of pathskill</p>
                             <h1 class="text-white">The New Way to Achieve Good Skills</h1>
                             <p class="text-white">We provide tons of pathskill that you can choose and focus on</p>
-                            <button class="btn btn-light rounded-pill">Lebih Lanjut</button>
+                            <button class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3">Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
                         </div>
 
                         
@@ -82,7 +82,7 @@
         <!-- HEADER LANDING END -->
 
         <!-- PATNER LOGO -->
-        <section id="partner" class="container py-5 px-3">
+        <section id="partner" class="container py-5">
 
             <div class="list-partner d-flex justify-content-around align-items-center">
                 <div>
@@ -132,38 +132,40 @@
 
         <!-- BENEFIT PELATIHAN -->
 
-        <section id="benefit">
+        <section id="benefit" class="py-5">
             
             <div class="container">
 
-                <p class="text-uppercase">We provide tons of pathskill</p>
-                <h1 class="">Benefit Pelatihan</h1>
+                <div class="head-section py-5">
+                    <p class="text-uppercase mb-0">We provide tons of pathskill</p>
+                    <h1 class="ms--2">Benefit <span>Pelatihan</span></h1>
+                </div>
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="card shadow border-0">
+                        <div class="card-benefit card border-0 p-3">
                             <div class="card-body">
-                                <img src="" alt="">
-                                <h4>The New Way to Achieve Good Skills</h4>
-                                <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
+                                <img class="mb-5" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="">
+                                <h4 class="mb-3"><span>The New Way</span> to Achieve Good Skills</h4>
+                                <p class="mb-0">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
                             </div>
                         </div>    
                     </div>
                     <div class="col-lg-4">
-                        <div class="card shadow border-0">
+                        <div class="card-benefit card border-0 p-3" style="background: #751119;">
                             <div class="card-body">
-                                <img src="" alt="">
-                                <h4>The New Way to Achieve Good Skills</h4>
-                                <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
+                                <img class="mb-5 text-white" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="">
+                                <h4 class="mb-3 text-white">The New Way to Achieve Good Skills</h4>
+                                <p class="mb-0 text-white">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
                             </div>
                         </div>    
                     </div>
                     <div class="col-lg-4">
-                        <div class="card shadow border-0">
+                        <div class="card-benefit card border-0 p-3">
                             <div class="card-body">
-                                <img src="" alt="">
-                                <h4>The New Way to Achieve Good Skills</h4>
-                                <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
+                                <img class="mb-5" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="">
+                                <h4 class="mb-3">The New Way to Achieve Good Skills</h4>
+                                <p class="mb-0">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
                             </div>
                         </div>    
                     </div>
@@ -179,22 +181,42 @@
         
         <section id="pelatihan">
 
-            <div class="container">
+            <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-6 d-flex justify-content-center">
                         <img src="<?= base_url('/assets/img/guest/img-header-main.svg') ?>" alt="" class="w-75">
                     </div>
                     <div class="col-lg-6">
-                        <p>We provide tons of pathskill</p>
-                        <h1>Statistik Pelatihan Kami</h1>
+
+                        <div class="head-section">
+                            <p class="text-uppercase mb-0">We provide tons of pathskill</p>
+                            <h1 class="ms--2">Statistik<span> Pelatihan</span></h1>
+                        </div>
                         <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill</p>
                         
-                        <div class="row">
-                            <div class="col-lg-4"></div>
-                            <div class="col-lg-4"></div>
-                            <div class="col-lg-4"></div>
-                        </div>
-                        <button class="btn btn-light rounded-pill">Lebih Lanjut</button>
+                        <div class="row statistik-list mb-4">
+                            <div class="col-lg-4">
+                                <div class="card border-0 text-center p-3">
+                                    <h1 class="mb-0">21</h1>
+                                    <p>Pengajar</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card border-0 text-center p-3">
+                                    <h1 class="mb-0">21</h1>
+                                    <p>Pengajar</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card border-0 text-center p-3">
+                                    <h1 class="mb-0">21</h1>
+                                    <p>Pengajar</p>
+                                </div>
+                            </div>
+                        </div>                            
+                        
+                        <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3">Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+
                     </div>
                 </div>
             </div>
@@ -205,31 +227,35 @@
 
         <!-- DAFTAR PELATIHAN -->
 
-        <section id="daftar-pelatihan">
+        <section id="daftar-pelatihan" style="background: #FBF3F2;">
 
-            <div class="container">
+            <div class="container  py-5">
                 
                 <div class="row">
-                    <div class="col-lg-6">
-                        <p>We provide tons of pathskill</p>
-                        <h1>Ikuti Pelatihan Berikut</h1>
+
+                    <div class="col-lg-7 pb-3">
+                        <div class="head-section">
+                            <p class="text-uppercase mb-0">We provide tons of pathskill</p>
+                            <h1 class="ms--2">Ikuti <span>Pelatihan</span> Berikut</h1>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <button class="btn btn-light rounded-pill">Lebih Lanjut</button>
+
+                    <div class="col text-end">                        
+                        <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto">Lebih Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="card shadow border rounded-3">
+                        <div class="pelatihan-item card shadow border rounded-3">
+                            <img class="rounded shadow" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="Cover Pelatihan">
+                            
                             <div class="card-body">
-
-                                <img src="" alt="">
-                                <span class="badge rounded-pill text-bg-primary">Primary</span>
-                                <h5>Ini adalah Pelatihan paling populer di Indonesia</h5>
-                                <p>By Satria Sambiring</p>
-                                <h4>Rp. 799.000</h4>
-                                <button class="btn btn-light rounded-pill">Lebih Lanjut</button>
+                                <span class="badge rounded-pill text-uppercase text-dark mb-2">Primary</span>
+                                <h5 class="mb-3">Ini adalah Pelatihan paling populer di Indonesia</h5>
+                                <p class="text-muted">By Satria Sambiring</p>
+                                <h4 class="mb-3">Rp. 799.000</h4>
+                                <button class="btn btn-light rounded-pill w-100 text-uppercase text-white">Daftar Pelatihan</button>
 
                             </div>
                         </div>
@@ -245,20 +271,50 @@
 
         <section id="daftar-faq">
 
-            <div class="container">
-                <p>We provide tons of pathskill</p>
-                <h1>FAQ</h1>
-                <p>
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Link with href
-                    </a>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Button with data-bs-target
-                    </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+            <div class="container py-5">
+                
+
+                <div class="head-section">
+                    <p class="text-uppercase mb-0">We provide tons of pathskill</p>
+                    <h1 class="ms--2"><span>FAQ</span></h1>
+                </div>
+
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="mb-3">
+                        <h2 class="accordion-header  faq-item" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Accordion Item #1
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h2 class="accordion-header  faq-item" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h2 class="accordion-header  faq-item" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Accordion Item #3
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -271,24 +327,42 @@
 
         <section id="testimoni">
 
-            <div class="container">
-                <p>We provide tons of pathskill</p>
-                <h1>Testimoni Peserta Kami</h1>
+            <div class="container py-5">
+                
+                <div class="head-section mb-4">
+                    <p class="text-uppercase mb-0">We provide tons of pathskill</p>
+                    <h1 class="ms--2">Testimoni <span>Peserta Kami</span></h1>
+                </div>
 
                 <div class="daftar-testimoni">
-                    <div class="testimoni-item card shadow">
+                    <div class="testimoni-item card border-0 p-4">
                         <div class="row">
-                            <div class="col-lg-4">
-                                <img src="" alt="">
-                                <h5>Alfian Rahmatullah</h5>
-                                <p>Web Designer</p>
+                            <div class="col-lg-3">
+                                <img class="mb-4" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="">
+                                <h5 class="mb-1">Alfian Rahmatullah</h5>
+                                <p class="mb-0">Web Designer</p>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-9 d-flex align-items-center">
+                                <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus onWe provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus onWe provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimoni-item card border-0 p-4">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <img class="mb-4" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="">
+                                <h5 class="mb-1">Alfian Rahmatullah</h5>
+                                <p class="mb-0">Web Designer</p>
+                            </div>
+                            <div class="col-lg-9 d-flex align-items-center">
                                 <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus onWe provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus onWe provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                
 
             </div>
 
@@ -300,18 +374,80 @@
 
         <section id="tanyalebihlanjut">
             
-            <div class="container">
+            <div class="container py-5 text-center">
 
-                <div class="card shadow">
-                    <h1>Tertarik dengan Pelatihan kami?</h1>
-                    <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We</p>
-                    <button class="btn btn-light rounded-pill">Lebih Lanjut</button>
+                <div class="card border-0 tanyalebihlanjut-item align-items-center">
+                    <h1 class="text-white mb-4">Tertarik dengan Pelatihan kami?</h1>
+                    <p class="text-white mb-4">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We</p>
+                    <button class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3">Tanya Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
                 </div>
             </div>
 
         </section>
 
         <!-- PERTANYAAN DONE -->
+
+        <section class="footer text-white">
+            <div class="container">
+                <footer class="py-5">
+                    <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-2 mb-3">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5 offset-md-1 mb-3">
+                        <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                        </form>
+                    </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 text-center">
+                        <p>2022 Copyright Tax Session. All Rights Reserved.</p>
+                        <ul class="list-unstyled d-flex">
+                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                        </ul>
+                    </div>
+                </footer>
+                </div>
+        </section>
 
         <!-- Boostrap Js -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

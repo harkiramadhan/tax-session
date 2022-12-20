@@ -4,6 +4,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+    max-width: 1040px !important;
+}
+
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -25,6 +29,42 @@
     /* height: 0;
     padding: 0; */
     /* padding-bottom: 140px; */
+}
+
+.head-section {
+    color: #751119;
+}
+
+.head-section h1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+    margin-left: -3px !important;
+}
+
+.head-section span {
+    font-weight: 700;
+}
+
+.btn-icon-session {
+    display: inline;
+}
+
+.btn-icon-session span{
+    display: flex;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: #C63C32;
+    border-radius: 50%;
+    color: #F5F5F5;
+}
+
+.btn-icon-session-light {
+    background: rgba(198, 60, 50, 0.1);
+    border: 1px solid rgba(198, 60, 50, 0.5);
 }
 
 .list-partner img{
@@ -75,8 +115,9 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -10px;
-    top: 90px;
+    /* right: -10px; */
+    left: -12px;
+    top: 40%;
     z-index: 2;
     background-color: #4F4F4F;
     border: none;
@@ -89,9 +130,138 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -10px;
-    bottom: 90px;
+    right: -12px;
+    top: 40%;
     z-index: 2;
     background-color: #4F4F4F;
     border: none;
+}
+
+.card-benefit {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 30px rgba(198, 60, 50, 0.1);
+    border-radius: 80px 0px 24px 24px;
+}
+
+.card-benefit img {
+    object-fit: cover;
+    height: 96px;
+    width: 96px;
+    border-radius: 50%;
+}
+
+.card-benefit h4 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.card-benefit h4 span {
+    font-weight: 900;
+}
+
+.card-benefit p {
+    text-align: justify;
+}
+
+.statistik-list div .card{
+    height: 116px;
+    background: rgba(198, 60, 50, 0.1);
+    /* box-shadow: 0px 20px 30px rgba(198, 60, 50, 0.1); */
+
+}
+
+.pelatihan-item img{
+    object-fit: cover;
+    height: 168px;
+    width: 100%;
+}
+
+.pelatihan-item span {
+    border: 2px solid rgba(174, 0, 0, 0.5);
+    background-color: none;
+}
+
+.pelatihan-item button {
+    background: #C63C32;
+}
+
+.faq-item {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(38, 50, 56, 0.1) !important;
+    border-radius: 8px;
+}
+
+.accordion-body {
+    margin-top: 10px;
+    background: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 20px 30px rgba(38, 50, 56, 0.05);
+    /* border-radius: 0px 0px 16px 16px ; */
+    border-radius: 16px;
+}
+
+.accordion-button {
+    border: none;
+    border-radius: 8px;
+    color: #C63C32;
+
+}
+
+.accordion-button:focus {
+    outline: none;
+    border-color: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #FFFFFF;
+    color: #C63C32;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon);
+    content: e5c6;
+    color: #C63C32;
+
+}
+
+.daftar-testimoni {
+    box-shadow: 0px 20px 110px rgba(198, 60, 50, 0.13);
+    border-radius: 80px 0px 24px 24px;
+
+}
+
+.daftar-testimoni > .slick-list {
+    border-radius: 80px 0px 24px 24px !important;
+}
+
+.testimoni-item {
+    background: #FFFFFF;
+}
+
+.testimoni-item img {
+    object-fit: cover;
+    height: 144px;
+    width: 144px;
+    border-radius: 50%;
+}
+
+.testimoni-item h5 {
+    font-weight: 700;
+}
+
+.tanyalebihlanjut-item {
+    background: #C63C32;
+    border-radius: 32px;
+    padding: 70px 130px;
+}
+
+.footer {
+    padding-top: 110px;
+    margin-top: -120px;
+    background: #340307;
 }

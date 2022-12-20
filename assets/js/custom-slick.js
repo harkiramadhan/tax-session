@@ -47,4 +47,16 @@ $(document).ready(function(){
         nextArrow:'<button type="button" class="btn btn-dark rounded-circle banner-button-next"><span class="material-symbols-outlined">arrow_forward</span></button>'
     });
 
+    $('.daftar-testimoni').slick({
+        infinite: true,
+        centerPadding: '40px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        prevArrow:'<button type="button" class="btn btn-dark rounded-circle banner-button-prev"><span class="material-symbols-outlined">arrow_back</span></button>',
+        nextArrow:'<button type="button" class="btn btn-dark rounded-circle banner-button-next"><span class="material-symbols-outlined">arrow_forward</span></button>'
+    });
+
 });
