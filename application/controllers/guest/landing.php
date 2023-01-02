@@ -12,17 +12,17 @@ class Landing extends CI_Controller{
         $var['title'] = "Selamat Datang di Platform Kami";
 
 		$this->load->view('layout/guest/header', $var);
-		// $this->load->view('guest/landing', $var);
-		// $this->load->view('layout/admin/footer', $var);
+		$this->load->view('guest/landing', $var);
+		$this->load->view('layout/guest/footer', $var);
         
     }
 
-	function banner(){
+	function course(){
 
-        $var['title'] = "Daftar Banners Landing Page";
+        $var['title'] = "";
 
-		$this->load->view('layout/admin/header', $var);
-		$this->load->view('admin/banners', $var);
-		$this->load->view('layout/admin/footer', $var);
+		$this->load->view('layout/guest/header', $var);
+		$this->load->view('guest/course', $var);
+		$this->load->view('layout/guest/footer', $var);
 	}
 }
