@@ -37,10 +37,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto align-items-center">
                         <li class="nav-item my-lg-0 my-2">
-                            <a class="nav-link text-white active" aria-current="page" href="#">Beranda</a>
+                            <a class="nav-link text-white <?= ($this->uri->segment(1) == NULL) ? 'active' : '' ?>" aria-current="page" href="<?= site_url() ?>">Beranda</a>
                         </li>
                         <li class="nav-item my-lg-0 my-2 mx-2">
-                            <a class="nav-link text-white" href="#">Kelas</a>
+                            <a class="nav-link text-white <?= ($this->uri->segment(1) == 'course') ? 'active' : '' ?>" href="<?= site_url('course') ?>">Kelas</a>
                         </li>
                         <li class="nav-item my-lg-0 my-2 mx-2">
                             <a class="nav-link text-white" href="#">Cara Pembayaran</a>
