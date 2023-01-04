@@ -9,4 +9,17 @@ class M_Pelatihan extends CI_Model{
             'id' => $pelatihanid
         ])->row();
     }
+
+    function getActive($limit = false){
+        if($limit){
+            $this->db->limit($limit);
+        }
+
+        return $this->db->select()
+                        ->from('pelatihan')
+                        ->where([
+                            'status' => 1
+                        ])->order_by('created_at', "DESC")
+                        ->get();
+    }
 }

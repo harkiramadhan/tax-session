@@ -8,7 +8,8 @@ class Landing extends CI_Controller{
 			'M_Partner',
 			'M_Benefit',
 			'M_Faq',
-			'M_Testimoni'
+			'M_Testimoni',
+			'M_Pelatihan'
 		]);
 	}
     
@@ -19,6 +20,7 @@ class Landing extends CI_Controller{
 			'banners' => $this->M_Banners->getActive(),
 			'partners' => $this->M_Partner->getActive(),
 			'benefits' => $this->M_Benefit->getActive(),
+			'class' => $this->M_Pelatihan->getActive(5),
 			'faqs' => $this->M_Faq->getActive(),
 			'testimoni' => $this->M_Testimoni->getActive()
 		];

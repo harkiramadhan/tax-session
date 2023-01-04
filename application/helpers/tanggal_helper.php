@@ -364,3 +364,13 @@
         $hasil_rupiah = number_format($angka,0,',','.');
         return $hasil_rupiah;
     }
+
+    function discount($price, $discount){
+        $total = $price - ($price * ($discount/100));
+        if($total == 0){
+            $hasil_rupiah = "GRATIS";
+        }else{
+            $hasil_rupiah = "Rp " . number_format($total,0,',','.');
+        }
+        return $hasil_rupiah;
+    }

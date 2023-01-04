@@ -1,7 +1,4 @@
-
-        
         <!-- FOOTER -->
-
         <section class="footer text-white">
             <div class="container">
                 <footer class="py-5">
@@ -53,7 +50,7 @@
                     </div>
 
                     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 text-center">
-                        <p>2022 Copyright Tax Session. All Rights Reserved.</p>
+                        <p><?= date('Y') ?> Copyright Tax Session. All Rights Reserved.</p>
                         <ul class="list-unstyled d-flex">
                             <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
                             <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
@@ -63,9 +60,7 @@
                 </footer>
                 </div>
         </section>
-
         <!-- FOOTER DONE -->
-
 
         <!-- Boostrap Js -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
@@ -81,7 +76,6 @@
         
         <!-- Custom Js -->
         <script src="<?= base_url('assets/js/custom-slick.js') ?>"></script>
-        
 
     </body>
 </html>

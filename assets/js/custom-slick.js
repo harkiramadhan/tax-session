@@ -59,4 +59,8 @@ $(document).ready(function(){
         nextArrow:'<button type="button" class="btn btn-dark rounded-circle banner-button-next"><span class="material-symbols-outlined">arrow_forward</span></button>'
     });
 
+    $('.btn-redirect').click(function(){
+        var url = $(this).attr('data-url')
+        window.location.href = url
+    })
 });

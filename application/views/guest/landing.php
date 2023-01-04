@@ -128,27 +128,31 @@
                     <h1 class="ms--2">Ikuti <span>Pelatihan</span> Berikut</h1>
                 </div>
             </div>
-
             <div class="col text-end">                        
-                <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto">Lebih Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+                <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto btn-redirect" data-url="<?= site_url('course') ?>">Lebih Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4">
-                <div class="pelatihan-item card shadow border rounded-3">
-                    <img class="rounded shadow" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="Cover Pelatihan">
-                    
-                    <div class="card-body">
-                        <span class="badge rounded-pill text-uppercase text-dark mb-2">Primary</span>
-                        <h5 class="mb-3">Ini adalah Pelatihan paling populer di Indonesia</h5>
-                        <p class="text-muted">By Satria Sambiring</p>
-                        <h4 class="mb-3">Rp. 799.000</h4>
-                        <button class="btn btn-light rounded-pill w-100 text-uppercase text-white">Daftar Pelatihan</button>
-
+            <?php foreach($class->result() as $cr){ ?>
+                <div class="col-lg-4">
+                    <div class="pelatihan-item card shadow border rounded-3">
+                        <img class="rounded shadow" src="<?= base_url('uploads/pelatihan/' . $cr->cover_img) ?>" alt="Cover Pelatihan">
+                        <div class="card-body">
+                            <span class="badge rounded-pill text-uppercase text-dark mb-2">Primary</span>
+                            <h5 class="mb-3"><?= $cr->judul ?></h5>
+                            <p class="text-muted">By <?= $cr->pemateri ?></p>
+                            <?php if($cr->diskon != 0): ?>
+                                <h5 class="mb-0 text-danger"><s>Rp. <?= rupiah($cr->harga) ?></s></h5>
+                                <h5 class="mb-3">Rp. <?= discount($cr->harga, $cr->diskon) ?></h5>
+                            <?php else: ?>
+                                <h4 class="mb-3">Rp. <?= rupiah($cr->harga) ?></h4>
+                            <?php endif; ?>
+                            <button class="btn btn-light rounded-pill w-100 text-uppercase text-white">Daftar Pelatihan</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </section>
