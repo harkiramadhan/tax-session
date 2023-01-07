@@ -10,6 +10,12 @@ class M_Pelatihan extends CI_Model{
         ])->row();
     }
 
+    function getByFlag($flag){
+        return $this->db->get_where('pelatihan', [
+            'flag' => $flag
+        ])->row();
+    }
+
     function getActive($limit = false){
         if($limit){
             $this->db->limit($limit);
@@ -21,5 +27,13 @@ class M_Pelatihan extends CI_Model{
                             'status' => 1
                         ])->order_by('created_at', "DESC")
                         ->get();
+    }
+
+    function getPaginate($rowno, $rowperpage){
+        return $this->db->select()
+                        ->from('pelatihan')
+                        ->where([
+                            'status' => 1
+                        ])->limit($rowperpage, $rowno)->order_by('created_at', "DESC")->get();
     }
 }

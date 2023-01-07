@@ -40,7 +40,7 @@
                             <a class="nav-link text-white <?= ($this->uri->segment(1) == NULL) ? 'active' : '' ?>" aria-current="page" href="<?= site_url() ?>">Beranda</a>
                         </li>
                         <li class="nav-item my-lg-0 my-2 mx-2">
-                            <a class="nav-link text-white <?= ($this->uri->segment(1) == 'course') ? 'active' : '' ?>" href="<?= site_url('course') ?>">Kelas</a>
+                            <a class="nav-link text-white <?= ($this->uri->segment(1) == 'pelatihan') ? 'active' : '' ?>" href="<?= site_url('pelatihan') ?>">Kelas</a>
                         </li>
                         <li class="nav-item my-lg-0 my-2 mx-2">
                             <a class="nav-link text-white" href="#">Cara Pembayaran</a>

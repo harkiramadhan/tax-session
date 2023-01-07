@@ -129,7 +129,7 @@
                 </div>
             </div>
             <div class="col text-end">                        
-                <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto btn-redirect" data-url="<?= site_url('course') ?>">Lebih Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+                <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto btn-redirect" data-url="<?= site_url('pelatihan') ?>">Lebih Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
             </div>
         </div>
 
@@ -148,7 +148,7 @@
                             <?php else: ?>
                                 <h4 class="mb-3">Rp. <?= rupiah($cr->harga) ?></h4>
                             <?php endif; ?>
-                            <button class="btn btn-light rounded-pill w-100 text-uppercase text-white">Daftar Pelatihan</button>
+                            <button class="btn btn-light rounded-pill w-100 text-uppercase text-white btn-redirect" data-url="<?= site_url('pelatihan/daftar/' . $cr->flag) ?>">Daftar Pelatihan</button>
                         </div>
                     </div>
                 </div>
