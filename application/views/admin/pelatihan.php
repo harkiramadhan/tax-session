@@ -32,6 +32,7 @@
                                 if($pelatihan->num_rows() > 0): 
                                     $no = 1;
                                     foreach($pelatihan->result() as $row):
+                                        $peserta = $this->M_Pelatihan->getPeserta($row->id);
                             ?>
                                 <!-- Jika ada data pelatihan -->
                                 <tr>
@@ -58,7 +59,7 @@
                                                 </p>
                                                 <a href="<?= site_url('admin/pelatihan/participant/' . $row->id) ?>" class="text-xs font-weight-bold mb-0">
                                                     <i class="fa fa-user me-2 text-success" aria-hidden="true"></i>
-                                                    <span class="text-dark">200 Peserta</span>
+                                                    <span class="text-dark"><?= $peserta->num_rows() ?> Peserta</span>
                                                     <i class="fa fa-arrow-right text-success ms-2" aria-hidden="true"></i>
                                                 </a>
                                             </div>

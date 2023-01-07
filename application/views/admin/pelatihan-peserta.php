@@ -75,82 +75,47 @@
                             </tr>
                         </thead>
                         <tbody>
-
-                            <!-- Jika ada data pelatihan -->
-                            <tr>
-                                <td class="align-items-center text-center text-sm">
-                                    1
-                                </td>
-                                <td class="align-items-center text-sm">
-                                    <span>Alfian Rahmatullah</span>
-                                </td>
-
-                                <td class="align-items-center text-sm text-center">
-                                    <span>#012191292</span>
-                                </td>
-                                <td class="align-top">
-                                    <div class="text-sm d-flex justify-content-center align-items-center">
-                                        <span class="badge badge-sm bg-gradient-success me-2">Lunas</span>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
-                                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                                        </div>  
-                                    </div>
-                                </td>
-                                <td class="align-top text-center">
-                                    <div class="ms-auto text-center">
-                                        <button class="btn btn-outline-success btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#buktiPembayaran"><i class="fa fa-check-circle me-1" aria-hidden="true"></i>File</button>
-                                    </div>
-                                </td>
-                                <td class="align-top">
-                                    <div class="ms-auto text-center">
-                                        <button class="btn bg-gradient-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                                        <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/6282112905550" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="align-items-center text-center text-sm">
-                                    2
-                                </td>
-                                <td class="align-items-center text-sm">
-                                    <span>Harki Ramadhan</span>
-                                </td>
-
-                                <td class="align-items-center text-sm text-center">
-                                    <span>#012191292</span>
-                                </td>
-                                <td class="align-top text-sm">
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <span class="badge badge-sm bg-gradient-danger me-2">Belum</span>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                                        </div>  
-                                    </div>
-                                </td>
-                                <td class="align-top text-center">
-                                    <div class="ms-auto text-center">
-                                        <button class="btn btn-outline-danger btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#buktiPembayaran"><i class="fa fa-times-circle me-1" aria-hidden="true"></i>File</button>
-                                    </div>
-                                </td>
-                                <td class="align-top">
-                                    <div class="ms-auto text-center">
-                                        <button class="btn bg-gradient-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                                        <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/6282112905550" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- Jika data pelatihan kosong -->
-                            <tr>
-                                <td colspan="6">
-                                    <div class="border rounded w-100 p-4 text-center text-sm mt-2">
-                                        Belum ada peserta
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php if($peserta->num_rows() > 0): ?>
+                                <?php
+                                    $no = 1;
+                                    foreach($peserta->result() as $row){ ?>
+                                    <!-- Jika ada data pelatihan -->
+                                    <tr>
+                                        <td class="align-items-center text-center text-sm"><?= $no++ ?></td>
+                                        <td class="align-items-center text-sm"><span><?= $row->nama ?></span></td>
+                                        <td class="align-items-center text-sm text-center"><span>#012191292</span></td>
+                                        <td class="align-top">
+                                            <div class="text-sm d-flex justify-content-center align-items-center">
+                                                <span class="badge badge-sm <?= ($row->status_bayar == 1) ? 'bg-gradient-success' : 'bg-gradient-danger' ?> me-2"><?= ($row->status_bayar == 1) ? 'Lunas' : 'Belum' ?></span>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault-<?= $row->id ?>" <?= ($row->status_bayar == 1) ? 'checked' : '' ?>>
+                                                    <label class="form-check-label" for="flexSwitchCheckDefault-<?= $row->id ?>"></label>
+                                                </div>  
+                                            </div>
+                                        </td>
+                                        <td class="align-top text-center">
+                                            <div class="ms-auto text-center">
+                                                <button class="btn <?= ($row->img) ? 'btn-outline-success' : 'btn-outline-danger' ?> btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#buktiPembayaran"><i class="fa <?= ($row->img) ? 'fa-check-circle' : 'fa-times-circle' ?> me-1" aria-hidden="true"></i>File</button>
+                                            </div>
+                                        </td>
+                                        <td class="align-top">
+                                            <div class="ms-auto text-center">
+                                                <button class="btn bg-gradient-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/<?= $row->wa ?>" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                            <?php else: ?>
+                                <!-- Jika data pelatihan kosong -->
+                                <tr>
+                                    <td colspan="6">
+                                        <div class="border rounded w-100 p-4 text-center text-sm mt-2">
+                                            Belum ada peserta
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>

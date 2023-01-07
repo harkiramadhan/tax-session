@@ -36,4 +36,10 @@ class M_Pelatihan extends CI_Model{
                             'status' => 1
                         ])->limit($rowperpage, $rowno)->order_by('created_at', "DESC")->get();
     }
+
+    function getPeserta($id){
+        return $this->db->get_where('peserta', [
+            'pelatihan_id' => $id
+        ]);
+    }
 }

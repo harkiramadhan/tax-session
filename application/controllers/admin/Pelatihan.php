@@ -95,7 +95,8 @@ class Pelatihan extends CI_Controller {
 	function participant($id){
         $var = [
 			'title' => 'Daftar Peserta Pelatihan',
-			'pelatihan' => $this->M_Pelatihan->getById($id)
+			'pelatihan' => $this->M_Pelatihan->getById($id),
+			'peserta' => $this->M_Pelatihan->getPeserta($id)
 		];
 		
 		$this->load->view('layout/admin/header', $var);
