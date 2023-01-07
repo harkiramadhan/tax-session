@@ -96,7 +96,9 @@ class Pelatihan extends CI_Controller {
         $var = [
 			'title' => 'Daftar Peserta Pelatihan',
 			'pelatihan' => $this->M_Pelatihan->getById($id),
-			'peserta' => $this->M_Pelatihan->getPeserta($id)
+			'peserta' => $this->M_Pelatihan->getPeserta($id),
+			'paid' => $this->M_Pelatihan->getPaid($id),
+			'unpaid' => $this->M_Pelatihan->getUnpaid($id)
 		];
 		
 		$this->load->view('layout/admin/header', $var);
@@ -203,4 +205,8 @@ class Pelatihan extends CI_Controller {
 
 		redirect($_SERVER['HTTP_REFERER']);
 	}	
+
+	function exportParticipant($id){
+
+	}
 }

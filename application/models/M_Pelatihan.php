@@ -42,4 +42,18 @@ class M_Pelatihan extends CI_Model{
             'pelatihan_id' => $id
         ]);
     }
+
+    function getPaid($id){
+        return $this->db->select('id')->get_where('peserta', [
+            'pelatihan_id' => $id,
+            'status_bayar' => 1
+        ]);
+    }
+
+    function getUnpaid($id){
+        return $this->db->select('id')->get_where('peserta', [
+            'pelatihan_id' => $id,
+            'status_bayar !=' => 1
+        ]);
+    }
 }

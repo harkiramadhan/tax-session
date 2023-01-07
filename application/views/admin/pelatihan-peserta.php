@@ -32,13 +32,13 @@
                                     </p>
                                     <p class="text-xs mb-0 me-3">
                                         <i class="fa fa-user mb-lg-0 mb-md-0 mb-2 me-1 text-success" aria-hidden="true"></i>
-                                        <span class="text-dark">200 Peserta</span>
+                                        <span class="text-dark"><?= $peserta->num_rows() ?> Peserta</span>
                                     </p>
                                     <p class="text-xs mb-0 me-3">
                                         <i class="fa fa-money mb-lg-0 mb-md-0 mb-2 me-1 text-success" aria-hidden="true"></i>
-                                        <span class="text-dark">200 Lunas</span>
+                                        <span class="text-dark"><?= $paid->num_rows() ?> Lunas</span>
                                     </p>
-                                    <a href="#" class="text-xs mb-lg-0 mb-md-0 mb-2 me-3">
+                                    <a href="<?= site_url('admin/pelatihan/exportParticipant/' . $pelatihan->id) ?>" class="text-xs mb-lg-0 mb-md-0 mb-2 me-3" target="__BLANK">
                                         <i class="fa fa-file-excel-o me-1 text-success" aria-hidden="true"></i>
                                         <span class="text-warning font-weight-bold">Download Excel</span>
                                     </a>
