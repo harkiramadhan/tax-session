@@ -261,7 +261,40 @@
 }
 
 .footer {
-    padding-top: 110px;
-    margin-top: -120px;
+    /* padding-top: 110px; */
+    /* margin-top: -120px; */
     background: #340307;
+}
+
+.page-link {
+    border-radius: 50% !important;
+    border: 0;
+    margin: 0 5px;
+    width: 38px !important;
+    height: 38px !important;
+    text-align: center;
+    color: #C63C32;
+    box-shadow: 0px 20px 110px rgba(201, 43, 32, 0.456) !important;
+}
+
+.page-link:hover {
+    color: black;
+}
+
+.text-primary {
+    color: #C63C32 !important;
+}
+
+.form-select {
+    background-image: url("../../img/icon/arrow_drop_down_circle_FILL1_wght400_GRAD0_opsz48.svg") !important;
+    background-size: 28px 28px;
+}
+
+.form-control:focus {
+    border-color: #c63c3232 !important;
+    box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.124);
+}
+
+.bg-primary-red {
+    background-color: #C63C32 !important;
 }
