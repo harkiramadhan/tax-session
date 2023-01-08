@@ -3,8 +3,9 @@
     <div class="container">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="<?= site_url('') ?>">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Course</li>
+                <li class="breadcrumb-item"><a href="<?= site_url('') ?>">Beranda</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Kelas</li>
+                <li class="breadcrumb-item active" aria-current="page">Form Pendaftaran <?= $pelatihan->judul ?></li>
             </ol>
         </nav>
     </div>
@@ -76,8 +77,8 @@
                     <option value="S3">S3</option>
                 </select>
             </div>
-            <button class="btn btn-light bg-primary-red mb-3 py-3 text-white rounded-pill w-100 text-uppercase border-0 shadow" type="submit">Daftar Pelatihan</button>
-            <button class="btn btn-light mb-3 py-3 text-gray rounded-pill w-100 text-uppercase btn-redirect" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>
+            <button class="btn btn-light bg-primary-red mb-3 py-3 text-white rounded-pill w-100 text-uppercase border-0 shadow font-16 weight-semi" type="submit">Daftar Pelatihan</button>
+            <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>
         </form>
     </div>
 </section>

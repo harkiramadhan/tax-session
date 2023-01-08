@@ -175,7 +175,7 @@
 
 .pelatihan-item img{
     object-fit: cover;
-    height: 168px;
+    height: 150px;
     width: 100%;
 }
 
@@ -260,6 +260,13 @@
     padding: 70px 130px;
 }
 
+.tanyalebihlanjut-item-pelatihan {
+    background: #C63C32;
+    border-radius: 32px;
+    padding: 34px 50px;
+}
+
+
 .footer {
     /* padding-top: 110px; */
     /* margin-top: -120px; */
@@ -297,4 +304,116 @@
 
 .bg-primary-red {
     background-color: #C63C32 !important;
+}
+
+/* list font */
+
+.font-8 {
+    font-size: 8px !important;
+}
+
+.font-12 {
+    font-size: 12px !important;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+.font-18 {
+    font-size: 18px !important;
+}
+
+.font-32 {
+    font-size: 32px !important;
+}
+
+.font-36 {
+    font-size: 36px !important;
+}
+
+.weight-light {
+    font-weight: 300 !important;
+}
+
+.weight-reguler {
+    font-weight: 400 !important;
+}
+
+.weight-semi {
+    font-weight: 600 !important;
+}
+
+.weight-bold {
+    font-weight: 700 !important;
+}
+
+.weight-bolder {
+    font-weight: 900 !important;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: #C63C32 !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: #C63C32;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: #C63C32;
+}
+
+.container-extend {
+    max-width: 1296px !important;
+}
+
+.deskripsi-pelatihan {
+    z-index: 1;
+}
+
+.tittle-deskripsi {
+    top: -43px;
+    position: absolute;
+    width: 144px;
+    /* height: 256px; */
+    background: #751119;
+    box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.1);
+    border-radius: 16px 16px 0px 0px;
+    padding: 10px 24px;
+    color: white;
+    z-index: 2;
+}
+
+.deskripsi-pelatihan-kanan {
+    position: relative;
+    top: -230px;
+    max-width: 296px !important;
+}
+
+.detail-info {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-info-item {
+    display: flex;
+}
+
+.detail-info-item div {
+    color: #751119;
+}
+
+@media (max-width: 990px) {
+    .deskripsi-pelatihan-kanan {
+        position: relative;
+        top: 0px;
+        max-width: 100% !important;
+    }
 }
