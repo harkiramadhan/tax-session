@@ -33,6 +33,8 @@
                 <h5 class="mb-2 text-primary font-36">#2102012 <div class="material-symbols-outlined text-dark">content_copy</div></h5>
                 <p class="text-sm mb-1"><small>Nama Bank</small></p>
                 <h5 class="mb-2">TAX SESSION</h5>
+                <p class="text-sm mb-1"><small>Nomor Rekening</small></p>
+                <h5 class="mb-2">092112-0290-29002</h5>
                 <p class="text-sm mb-1"><small>Amount to Pay - <span class="text-warning">Bayar Sampai 3 digit terahir</span></small></p>
                 <h5 class="mb-2 weight-bold">IDR 289.122</h5>
             </div>

@@ -1,6 +1,6 @@
 <!-- BREADCUMP  -->
 <section id="breadcump" class="py-3 mb-0">
-    <div class="container">
+    <div class="container container-extend">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="<?= site_url('') ?>">Beranda</a></li>
@@ -14,7 +14,7 @@
 
 <!-- HEADER COURSE PAGE -->
 <section class="">
-    <div class="container contianer-extend">
+    <div class="container container-extend contianer-extend">
         <div class="rounded rounded-4 px-4 py-4 mb-4" style="background-color: #751119;">
             <div class="row">
                 <div class="col-lg-8 col-12">
@@ -57,7 +57,7 @@
             <div class="col-lg-4">
                 <div class="deskripsi-pelatihan-kanan">
                     <div class="pelatihan-item card shadow border-0 rounded-3 mb-4">
-                        <img class="rounded shadow" src="http://localhost/tax-session/uploads/pelatihan/39bb136be363401a1ce9408d07207457.jpg" alt="Cover Pelatihan">
+                        <img class="rounded shadow" src="http://localhost/tax-session/uploads/pelatihan/39bb136be363401a1ce9408d07207457.jpg" alt="Cover Pelatihan" style="height: 249px;">
                         <div class="card-body">
                             <ul class="detail-info">
                                 <li class="detail-info-item mb-2">

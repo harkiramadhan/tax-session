@@ -57,6 +57,17 @@ class Pelatihan extends CI_Controller{
 		$this->load->view('layout/guest/footer', $var);
     }
 
+    function status(){
+        $var = [
+            'title' => 'Status Pembayaran Anda ',
+            // 'pelatihan' => $pelatihan
+        ];
+
+		$this->load->view('layout/guest/header', $var);
+		$this->load->view('guest/pelatihan-status', $var);
+		$this->load->view('layout/guest/footer', $var);
+    }
+
     function daftar($flag){
         $pelatihan = $this->M_Pelatihan->getByFlag($flag);
         $var = [
