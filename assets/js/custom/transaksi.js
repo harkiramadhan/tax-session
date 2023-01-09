@@ -1,4 +1,14 @@
 $('.btn-find').click(function(){
+    find()
+})
+
+$(document).on('keypress',function(e) {
+    if(e.which == 13) {
+        find()
+    }
+});
+
+function find(){
     var find = $('#find').val()
 
     if(find){
@@ -19,4 +29,4 @@ $('.btn-find').click(function(){
         $('#findValidation').text('Lengkapi Form Terlebih Dahulu')
         $('#find').addClass('is-invalid')
     }
-})
+}
