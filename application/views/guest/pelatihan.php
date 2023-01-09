@@ -42,7 +42,7 @@
                         <?php else: ?>
                             <h4 class="mb-3"><?= rupiah($row->harga) ?></h4>
                         <?php endif; ?>
-                        <button class="btn btn-light rounded-pill w-100 text-uppercase text-white btn-redirect font-14 py-2" data-url="<?= site_url('pelatihan/daftar/' . $row->flag) ?>">Daftar Pelatihan</button>
+                        <button class="btn btn-light rounded-pill w-100 text-uppercase text-white btn-redirect font-14 py-2" data-url="<?= site_url('pelatihan/' . $row->flag . '/detail') ?>">Daftar Pelatihan</button>
                     </div>
                 </div>
             </div>

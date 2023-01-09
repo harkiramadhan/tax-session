@@ -57,4 +57,5 @@ $route['admin'] = 'admin/auth';
 $route['logout'] = 'admin/auth/logout';
 $route['pelatihan/(:any)/detail'] = 'pelatihan/detail/$1';
 $route['pelatihan/(:any)/daftar'] = 'pelatihan/daftar/$1';
-$route['pelatihan/(:any)/payment'] = 'pelatihan/pembayaran/$1';
+$route['pelatihan/(:any)/payment/(:num)'] = 'pelatihan/pembayaran/$1/$2';
+$route['pelatihan/(:any)/status/(:num)'] = 'pelatihan/status/$1/$2';

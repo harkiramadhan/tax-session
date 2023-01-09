@@ -47,12 +47,14 @@ class Pelatihan extends CI_Controller{
 		$this->load->view('layout/guest/footer', $var);
     }
 
-    function pembayaran($flag){
+    function pembayaran($flag, $id){
         $pelatihan = $this->M_Pelatihan->getByFlag($flag);
+        $peserta = $this->M_Pelatihan->getPesertaById($id);
         $var = [
             'title' => 'Pembayaran Pelatihan ' . $pelatihan->judul,
             'pelatihan' => $pelatihan,
-            'setting' => $this->db->get_where('settings', ['id' => 1])->row()
+            'setting' => $this->db->get_where('settings', ['id' => 1])->row(),
+            'peserta' => $peserta
         ];
 
 		$this->load->view('layout/guest/header', $var);
@@ -101,15 +103,17 @@ class Pelatihan extends CI_Controller{
                     'email' => $this->input->post('email', TRUE),
                     'wa' => $this->input->post('wa', TRUE),
                     'jenkel' => $this->input->post('jenkel', TRUE),
-                    'pendidikan' => $this->input->post('pendidikan', TRUE)
+                    'pendidikan' => $this->input->post('pendidikan', TRUE),
+                    'nominal' => $this->input->post('nominal', TRUE)
                 ];
                 
                 $this->db->insert('peserta', $dataInsert);
                 if($this->db->affected_rows() > 0){
+                    $ids = $this->db->insert_id();
                     $this->session->set_flashdata('success', "Berhasil Mendaftar");
+                    $pelatihan = $this->M_Pelatihan->getById($this->input->post('pelaid', TRUE));
+                    redirect('pelatihan/' . $pelatihan->flag . '/payment/' . $ids);
                 }
-                $pelatihan = $this->M_Pelatihan->getById($this->input->post('pelaid', TRUE));
-                redirect('pelatihan/' . $pelatihan->flag . '/payment');
             }
         }
     }
