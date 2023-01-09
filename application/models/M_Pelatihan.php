@@ -43,6 +43,12 @@ class M_Pelatihan extends CI_Model{
         ]);
     }
 
+    function getPesertaById($id){
+        return $this->db->get_where('peserta', [
+            'id' => $id
+        ])->row();
+    }
+
     function getPaid($id){
         return $this->db->select('id')->get_where('peserta', [
             'pelatihan_id' => $id,

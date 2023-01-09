@@ -86,21 +86,21 @@
                                         <td class="align-items-center text-sm text-center"><span>#012191292</span></td>
                                         <td class="align-top">
                                             <div class="text-sm d-flex justify-content-center align-items-center">
-                                                <span class="badge badge-sm <?= ($row->status_bayar == 1) ? 'bg-gradient-success' : 'bg-gradient-danger' ?> me-2"><?= ($row->status_bayar == 1) ? 'Lunas' : 'Belum' ?></span>
+                                                <span class="badge badge-sm <?= ($row->status_bayar == 1) ? 'bg-gradient-success' : 'bg-gradient-danger' ?> me-2 badge-pembayaran-<?= $row->id ?>"><?= ($row->status_bayar == 1) ? 'Lunas' : 'Belum' ?></span>
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault-<?= $row->id ?>" <?= ($row->status_bayar == 1) ? 'checked' : '' ?>>
+                                                    <input class="form-check-input toggle-bayar" type="checkbox" data-id="<?= $row->id ?>" id="flexSwitchCheckDefault-<?= $row->id ?>" <?= ($row->status_bayar == 1) ? 'checked' : '' ?>>
                                                     <label class="form-check-label" for="flexSwitchCheckDefault-<?= $row->id ?>"></label>
                                                 </div>  
                                             </div>
                                         </td>
                                         <td class="align-top text-center">
                                             <div class="ms-auto text-center">
-                                                <button class="btn <?= ($row->img) ? 'btn-outline-success' : 'btn-outline-danger' ?> btn-sm py-1 px-2 mb-0" data-bs-toggle="modal" data-bs-target="#buktiPembayaran"><i class="fa <?= ($row->img) ? 'fa-check-circle' : 'fa-times-circle' ?> me-1" aria-hidden="true"></i>File</button>
+                                                <button class="btn <?= ($row->img) ? 'btn-outline-success' : 'btn-outline-danger' ?> btn-sm py-1 px-2 mb-0 btn-upload" data-id="<?= $row->id ?>"><i class="fa <?= ($row->img) ? 'fa-check-circle' : 'fa-times-circle' ?> me-1" aria-hidden="true"></i>File</button>
                                             </div>
                                         </td>
                                         <td class="align-top">
                                             <div class="ms-auto text-center">
-                                                <button class="btn bg-gradient-dark btn-sm py-1 text-white px-2 mb-0" data-bs-toggle="modal" data-bs-target="#dataPeserta"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                                                <button class="btn bg-gradient-dark btn-sm py-1 text-white px-2 mb-0 btn-edit" data-id="<?= $row->id ?>"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                                 <a class="btn btn-success btn-sm py-1 text-white px-2 mb-0" href="https://wa.me/<?= $row->wa ?>" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                             </div>
                                         </td>
@@ -125,109 +125,19 @@
 </div>
 
 <!-- Modal Bukti Pembayaran -->
-<div class="modal fade" id="buktiPembayaran" tabindex="-1" aria-labelledby="buktiPembayaran" aria-hidden="true">
+<div class="modal fade" id="modalUpload" tabindex="-1" aria-labelledby="modalUpload" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="modal-title" id="buktiPembayaran">BUKTI PEMBAYARAN</h6>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body bg-gray-100">
-
-                <!-- Keterangan jika belum ada bukti transfer -->
-                <div class="border rounded w-100 p-4 text-center text-sm mt-0">
-                    Belum ada peserta
-                </div>
-
-                <!-- Keterangan jika sudah ada bukti transfer -->
-                <div class="mb-2 mt-2 text-center">
-                    <img src="https://i.ibb.co/pw3vD4p/Implementasi-Neuro-Education-di-PAUD-Banner-Lanskap.png" class="img-fluid img-center shadow rounded" style="max-height: 200px">
-                </div>
-
-                <!-- Jika sudah ada bukti transfer dan akan upload/mengganti bukti tranfer -->
-                <p class="h6 text-center font-weight-bold">Bukti Pembayaran Baru</p>
-                <div class="mb-2 mt-2 text-center">
-                    <img src="https://tangerangonline.id/wp-content/uploads/2021/06/IMG-20210531-WA0027.jpg" style="max-height: 200px">
-                </div>
-
-                <!-- Tombol upload yang muncul selalu -->
-                <div class="form-group mb-0">
-                    <label class="form-control-label" for="input-gambar">Upload Bukti Pembayaran
-                    <span class="text-danger">*</span>
-                    </label>
-                    <div class="mb-0">
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer pb-0 d-flex justify-content-start">
-                <button type="button" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
-                <button type="button" class="btn btn-link text-secondary w-100 mb-2" data-bs-dismiss="modal">TUTUP</button>
-            </div>
+        <div class="modal-content upload-content">
+            
         </div>
     </div>
 </div>
 
 <!-- Modal Data Peserta -->
-<div class="modal fade" id="dataPeserta" tabindex="-1" aria-labelledby="dataPeserta" aria-hidden="true">
+<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEdit" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="modal-title" id="dataPeserta">DATA PESERTA</h6>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body bg-gray-100">
-                <div class="pelati$pelatihan">
-                    <div class="col-lg-12">
-                        <div class="form-group mb-2">
-                            <label class="form-control-label" for="input-nama">Nama Lengkap <span class="text-danger">*</span></label>
-                            <input type="text" name="title" class="form-control" placeholder="Tulis nama lengkapmu" value="" required="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group mb-2">
-                            <label class="form-control-label" for="input-nama">No HP/WA <span class="text-danger">*</span></label>
-                            <input type="text" name="title" class="form-control" placeholder="0821xxxxxx" value="" required="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group mb-2">
-                            <label class="form-control-label" for="input-nama">Email Aktif <span class="text-danger">*</span></label>
-                            <input type="text" name="title" class="form-control" placeholder="email@gmail.com" value="" required="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group mb-2">
-                            <label for="input-aksi">Jenis Kelamin <span class="text-danger">*</span></label>
-                            <select class="form-control" name="#" required="">
-                                <option value="">- Pilih -</option>
-                                <option value="2">Laki - Laki</option>
-                                <option value="3">Perempuan</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group mb-2">
-                            <label for="input-aksi">Pendidikan Terahir <span class="text-danger">*</span></label>
-                            <select class="form-control" name="#" required="">
-                                <option value="">- Pilih -</option>
-                                <option value="2">Laki - Laki</option>
-                                <option value="3">Perempuan</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group mb-2">
-                            <label for="input-aksi">Tanggal Lahir <span class="text-danger">*</span></label>
-                            <input type="date" name="title" class="form-control" placeholder="Berapa tanggal lahirmu" value="" required="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer pb-0 d-flex justify-content-start">
-                <button type="button" class="btn bg-gradient-dark w-100 mb-0">SIMPAN</button>
-                <button type="button" class="btn btn-link text-secondary w-100 mb-2" data-bs-dismiss="modal">TUTUP</button>
-            </div>
+        <div class="modal-content edit-content">
+            
         </div>
     </div>
 </div>
