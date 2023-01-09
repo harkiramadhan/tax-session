@@ -37,7 +37,7 @@
                     <br>
                     <p class="font-16 weight-bold mb-1">Apa yang kamu pelajari</p>
                     <p class="font-14 mb-1" style="text-align: justify; color: #7E7E7E;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae tincidunt mauris. Praesent sagittis rutrum augue id sodales. Morbi vulputate interdum ullamcorper. In in lorem sed risus suscipit laoreet. Donec laoreet sapien nec purus tempor auctor. Integer at magna nec elit fringilla ultrices ut ac felis. Cras nec blandit arcu. Curabitur ex ipsum, rhoncus ac dictum et, varius sit amet tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ipsum a leo maximus varius a in sapien.</p>
-                
+                    
                     <!-- BAGIAN DINAMIS QUILL SELESAI -->
                 </div>
 

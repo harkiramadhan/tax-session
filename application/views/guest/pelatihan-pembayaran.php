@@ -42,18 +42,16 @@
                 <img class="" src="https://logos-download.com/wp-content/uploads/2016/06/Mandiri_logo.png" alt="Cover Pelatihan" style=" height: auto; width: 130px;">
             </div>
         </div>
-        <!-- <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="mb-3">
-                <h2 class="accordion-header faq-item" id="panelsStayOpen-headingOne4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne4" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">About ?</button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne4" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne4" style="">
-                    <div class="accordion-body">
-                        Tax Session                        
-                    </div>
-                </div>
-            </div>  
-        </div> -->
+
+        <div class="position-relative">
+            <div class="px-4 py-4 border d-flex" style="border-radius: 25px;">
+                <h5 class="mb-0">Cara Pembayaran</h5>
+            </div>
+            <div class="px-4 py-4 mb-4 border d-flex" style="border-radius: 0px 0px 25px 25px; background: #F8F8F8; top: -10px;">
+                <h5 class="mt-5 mb-0">Cara Pembayaran</h5>
+            </div>
+        </div>
+        
         <h5 class="text-center my-3 weight-semi">Sudah Bayar?</h5>
         <button class="btn btn-light bg-primary-red mb-3 py-3 text-white rounded-pill w-100 text-uppercase border-0 shadow font-16 weight-semi" type="submit">KONFIRMASI SEKARANG</button>
         <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>
