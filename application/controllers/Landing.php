@@ -31,12 +31,4 @@ class Landing extends CI_Controller{
         
     }
 
-	function course(){
-
-        $var['title'] = "";
-
-		$this->load->view('layout/guest/header', $var);
-		$this->load->view('guest/course', $var);
-		$this->load->view('layout/guest/footer', $var);
-	}
 }

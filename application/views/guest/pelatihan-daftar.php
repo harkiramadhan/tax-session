@@ -1,6 +1,6 @@
 <!-- BREADCUMP  -->
 <section id="breadcump" class="py-3 mb-3" style="background: #F2F2F2;">
-    <div class="container">
+    <div class="container container-extend">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a href="<?= site_url('') ?>">Beranda</a></li>
@@ -14,8 +14,8 @@
 
 <!-- HEADER COURSE PAGE -->
 <section class="">
-    <div class="container">
-        <h4 class="text-center my-3">Daftar Pelatihan</h4>
+    <div class="container container-extend">
+        <h4 class="text-center my-5">Daftar Pelatihan</h4>
         <div class="px-4 py-3 mb-4 border" style="border-radius: 25px;">
             <div class="row">
                 <div class="col-lg-8">
