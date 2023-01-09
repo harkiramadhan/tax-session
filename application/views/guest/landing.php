@@ -148,7 +148,7 @@
                             <?php else: ?>
                                 <h4 class="mb-3">Rp. <?= rupiah($cr->harga) ?></h4>
                             <?php endif; ?>
-                            <button class="btn btn-light rounded-pill w-100 text-uppercase text-white btn-redirect" data-url="<?= site_url('pelatihan/daftar/' . $cr->flag) ?>">Daftar Pelatihan</button>
+                            <button class="btn btn-light rounded-pill w-100 text-uppercase text-white btn-redirect" data-url="<?= site_url('pelatihan/' . $cr->flag . '/detail') ?>">Daftar Pelatihan</button>
                         </div>
                     </div>
                 </div>

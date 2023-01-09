@@ -35,10 +35,11 @@ class Pelatihan extends CI_Controller{
 		$this->load->view('layout/guest/footer', $var);
     }
 
-    function detail(){
+    function detail($flag){
+        $pelatihan = $this->M_Pelatihan->getByFlag($flag);
         $var = [
-            'title' => 'Form Daftar Pelatihan ',
-            // 'pelatihan' => $pelatihan
+            'title' => 'Detail Pelatihan ' . $pelatihan->judul,
+            'pelatihan' => $pelatihan
         ];
 
 		$this->load->view('layout/guest/header', $var);
@@ -46,10 +47,12 @@ class Pelatihan extends CI_Controller{
 		$this->load->view('layout/guest/footer', $var);
     }
 
-    function pembayaran(){
+    function pembayaran($flag){
+        $pelatihan = $this->M_Pelatihan->getByFlag($flag);
         $var = [
-            'title' => 'Tutorial Pembayaran ',
-            // 'pelatihan' => $pelatihan
+            'title' => 'Pembayaran Pelatihan ' . $pelatihan->judul,
+            'pelatihan' => $pelatihan,
+            'setting' => $this->db->get_where('settings', ['id' => 1])->row()
         ];
 
 		$this->load->view('layout/guest/header', $var);
@@ -82,7 +85,9 @@ class Pelatihan extends CI_Controller{
 
     /* Action */
     function register(){
-        if($this->input->post('robot')){}else{
+        if($this->input->post('robot')){
+            redirect($_SERVER['HTTP_REFERER']);
+        }else{
             $cek = $this->db->get_where('peserta', [
                 'pelatihan_id' => $this->input->post('pelaid', TRUE),
                 'email' => $this->input->post('email', TRUE)
@@ -103,9 +108,9 @@ class Pelatihan extends CI_Controller{
                 if($this->db->affected_rows() > 0){
                     $this->session->set_flashdata('success', "Berhasil Mendaftar");
                 }
+                $pelatihan = $this->M_Pelatihan->getById($this->input->post('pelaid', TRUE));
+                redirect('pelatihan/' . $pelatihan->flag . '/payment');
             }
         }
-
-        redirect($_SERVER['HTTP_REFERER']);
     }
 }
