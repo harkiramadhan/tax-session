@@ -72,7 +72,7 @@ class Transaksi extends CI_Controller{
                         </div>
                         <div class="ms-auto d-flex justify-item-cente align-items-center">
                             <?php if($row->status_bayar == 1): ?>
-                                <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('pelatihan/' . $row->flag . '/detail') ?>" type="button">DETAIL KELAS</button>
+                                <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('pelatihan/' . $row->flag . '/status/' . $row->pesertaid) ?>" type="button">DETAIL TRANSAKSI</button>
                             <?php else: ?>
                                 <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('pelatihan/' . $row->flag . '/payment/' . $row->pesertaid) ?>" type="button">BAYAR SEKARANG</button>
                             <?php endif; ?>

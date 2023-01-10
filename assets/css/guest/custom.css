@@ -231,9 +231,7 @@
 }
 
 .daftar-testimoni {
-    box-shadow: 0px 20px 110px rgba(198, 60, 50, 0.13);
-    border-radius: 80px 0px 24px 24px;
-
+    
 }
 
 .daftar-testimoni > .slick-list {
@@ -242,6 +240,8 @@
 
 .testimoni-item {
     background: #FFFFFF;
+    /* box-shadow: 0px 20px 110px rgba(198, 60, 50, 0.13); */
+    border-radius: 80px 0px 24px 24px;
 }
 
 .testimoni-item img {

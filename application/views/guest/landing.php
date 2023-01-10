@@ -89,8 +89,8 @@
                 </div>
                 <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill</p>
                 
-                <div class="row statistik-list mb-4">
-                    <div class="col-lg-4">
+                <div class="row statistik-list mb-0">
+                    <div class="col-lg-6 col-12">
                         <div class="card border-0 text-center p-3">
                             <h1 class="mb-0">
                                 <?php
@@ -101,7 +101,7 @@
                             <p>Kelas</p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6 col-12">
                         <div class="card border-0 text-center p-3">
                             <h1 class="mb-0">
                                 <?php
@@ -114,8 +114,6 @@
                     </div>
                 </div>                            
                 
-                <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3">Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
-
             </div>
         </div>
     </div>
@@ -198,16 +196,16 @@
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
             <h1 class="ms--2">Testimoni <span>Peserta Kami</span></h1>
         </div>
-        <div class="daftar-testimoni">
+        <div class="daftar-testimoni px-4">
             <?php foreach($testimoni->result() as $tr){ ?>
-            <div class="testimoni-item card border-0 p-4">
-                <div class="row">
-                    <div class="col-lg-3">
+            <div class="testimoni-item card border-1 p-4">
+                <div class="d-flex flex-lg-row flex-column px-lg-5 px-2">
+                    <div class="">
                         <img class="mb-4" src="<?= base_url('uploads/testimoni/' . $tr->img) ?>" alt="">
                         <h5 class="mb-1"><?= $tr->nama ?></h5>
-                        <p class="mb-0"><?= $tr->jabatan ?></p>
+                        <p class="mb-3"><?= $tr->jabatan ?></p>
                     </div>
-                    <div class="col-lg-9 d-flex align-items-center">
+                    <div class="d-flex align-items-center ms-5">
                         <p><?= $tr->deskripsi ?></p>
                     </div>
                 </div>
