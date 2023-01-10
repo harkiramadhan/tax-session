@@ -60,7 +60,7 @@
             <!-- SECTION DONE -->
 
             <!-- BUTTON INI MUNCUL JIKA SUKSES -->
-            <button class="btn btn-light bg-primary-red mb-3 py-3 text-white rounded-pill w-100 text-uppercase border-0 shadow font-16 weight-semi btn-redirect" data-url="" type="button">Selesaikan Transaksi dan Ke Beranda</button>
+            <button class="btn btn-light bg-primary-red mb-3 py-3 text-white rounded-pill w-100 text-uppercase border-0 shadow font-16 weight-semi btn-redirect" data-url="<?= site_url() ?>" type="button">Selesaikan Transaksi dan Ke Beranda</button>
             <!-- DONE -->
         <?php else: ?>
             <!-- JIKA STATUS SELAIN SUKSES MUNCUL TOMBOL INI -->
