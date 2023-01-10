@@ -81,7 +81,7 @@
 
         <button class="btn btn-light mb-4 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="http://localhost/tax-session/pelatihan" type="button">KEMBALI</button>
         
-            <section class="mb-4">
+        <section class="mb-4">
             <div class="text-center">
                 <div class="card border-0 tanyalebihlanjut-item-pelatihan align-items-center">
                     <p class="text-white mb-2 font-32 weight-reguler">Mengalami kendala ketika mengikuti kelas?</p>

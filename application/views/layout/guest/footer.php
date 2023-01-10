@@ -1,64 +1,41 @@
         <!-- FOOTER -->
-        <section class="footer text-white">
-            <div class="container">
+        <section class="footer bg-white border-top">
+            <div class="container container-extend">
                 <footer class="py-5">
                     <div class="row">
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-5 offset-md-1 mb-3">
-                        <form>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of what's new and exciting from us.</p>
-                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        <div class="col-5 col-md-5 mb-3">
+                            <h5 class="mb-4">TAX SESSION</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque velit. Cras aliquam pretium urna, nec faucibus nisi consectetur.</p>
                         </div>
-                        </form>
-                    </div>
+
+                        <div class="col-1 col-md-1"></div>
+
+                        <div class="col-3 col-md-3 mb-3">
+                            <h5 class="mb-4">SOCIAL MEDIA</h5>
+                            <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-3 col-md-3 mb-3">
+                            <h5 class="mb-4">ALAMAT & KONTAK</h5>
+                            <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ruko Dynasty Walk kav 29B/15, Jln Jalur Sutera, Alam Sutera, </a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tlp : 021 – 29213742 </a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fax : 021 – 29213743</a></li>
+                            </ul>
+                        </div>
+
                     </div>
 
-                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 text-center">
-                        <p><?= date('Y') ?> Copyright Tax Session. All Rights Reserved.</p>
-                        <ul class="list-unstyled d-flex">
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-                        </ul>
-                    </div>
                 </footer>
-                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-center py-4 text-center bg-light">
+                <p class="mb-0"><?= date('Y') ?> Copyright Tax Session. All Rights Reserved.</p>
+                
+            </div>
         </section>
         <!-- FOOTER DONE -->
 

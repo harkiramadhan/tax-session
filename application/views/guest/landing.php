@@ -1,6 +1,6 @@
 <!-- HEADER LANDING -->
 <section id="header-landing" class="position-relative" style="background: #751119;">
-    <div class="container">
+    <div class="container container-extend">
 
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
@@ -24,7 +24,7 @@
 <!-- HEADER LANDING END -->
 
 <!-- PATNER LOGO -->
-<section id="partner" class="container py-5">
+<section id="partner" class="container container-extend py-5">
     <div class="list-partner d-flex justify-content-around align-items-center">
         <?php foreach($partners->result() as $pr){ ?>
             <div>
@@ -37,7 +37,7 @@
 
 <!-- BANNER -->
 <section id="banner">
-    <div class="container list-banner">
+    <div class="container container-extend list-banner">
         <?php foreach($banners->result() as $rb){ ?>
             <div class="banner-item">
                 <img src="<?= base_url('uploads/banners/' . $rb->img) ?>" alt="">
@@ -49,7 +49,7 @@
 
 <!-- BENEFIT PELATIHAN -->
 <section id="benefit" class="py-5">
-    <div class="container">
+    <div class="container container-extend">
         <div class="head-section py-5">
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
             <h1 class="ms--2">Benefit <span>Pelatihan</span></h1>
@@ -77,7 +77,7 @@
 
 <!-- STATISTIK -->
 <section id="pelatihan">
-    <div class="container py-5">
+    <div class="container container-extend py-5">
         <div class="row">
             <div class="col-lg-6 d-flex justify-content-center">
                 <img src="<?= base_url('/assets/img/guest/img-header-main.svg') ?>" alt="" class="w-75">
@@ -120,7 +120,7 @@
 
 <!-- DAFTAR PELATIHAN -->
 <section id="daftar-pelatihan" style="background: #FBF3F2;">
-    <div class="container  py-5">
+    <div class="container container-extend  py-5">
         <div class="row">
             <div class="col-lg-7 pb-3">
                 <div class="head-section">
@@ -160,7 +160,7 @@
 
 <!-- FAQ -->
 <section id="daftar-faq">
-    <div class="container py-5">
+    <div class="container container-extend py-5">
         <div class="head-section">
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
             <h1 class="ms--2"><span>FAQ</span></h1>
@@ -189,7 +189,7 @@
 
 <!-- TESTIMONI  -->
 <section id="testimoni">
-    <div class="container py-5">
+    <div class="container container-extend py-5">
         <div class="head-section mb-4">
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
             <h1 class="ms--2">Testimoni <span>Peserta Kami</span></h1>
@@ -216,7 +216,7 @@
 
 <!-- PERTANYAAN -->
 <section id="tanyalebihlanjut">
-    <div class="container py-5 text-center">
+    <div class="container container-extend py-5 text-center">
         <div class="card border-0 tanyalebihlanjut-item align-items-center">
             <h1 class="text-white mb-4">Tertarik dengan Pelatihan kami?</h1>
             <p class="text-white mb-4">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We</p>

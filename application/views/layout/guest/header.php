@@ -27,7 +27,7 @@
         <!-- NAVBAR LANDING PAGE -->
         <nav class="navbar navbar-expand-lg navbar-dark py-3" style="background: #751119;">
             <div class="container container-extend">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="<?= site_url() ?>">
                     <img src="<?= base_url('/assets/img/main-logo-white.svg') ?>" alt="Logo" class="d-inline-block align-text-center" style="height: 38px;">
                     <span class="d-lg-inline d-none text-white ms-1 font-weight-bolder font-18">Tax Session</span>
                 </a>
@@ -43,7 +43,7 @@
                             <a class="nav-link text-white font-18 <?= ($this->uri->segment(1) == 'pelatihan') ? 'active' : '' ?>" href="<?= site_url('pelatihan') ?>">Kelas</a>
                         </li>
                         <li class="nav-item my-lg-0 my-2 mx-2">
-                            <a class="nav-link text-white font-18" href="#">Cara Pembayaran</a>
+                            <a class="nav-link text-white font-18 <?= ($this->uri->segment(1) == 'pembayaran') ? 'active' : '' ?>" href="<?= site_url('pembayaran') ?>">Cara Pembayaran</a>
                         </li>
                         <li class="nav-item my-lg-0 my-2 mx-2">
                             <button type="button" class="d-lg-none d-block btn btn-md btn-light rounded-pill" style="padding: 12px 30px; font-weight: 600;">CEK TRANSAKSI</button>

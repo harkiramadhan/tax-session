@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-8">
                     <div class="head-section">
-                        <h4 class="text-white mb-3 font-36 weight-semi">Pilih Pelatihanmu Sekarang Juga</h4>
+                        <h4 class="text-white mb-3 font-36 weight-regular">Pilih Pelatihanmu Sekarang Juga</h4>
                         <p class="text-white mb-0 font-18 weight-reguler">Mulailah, beralih, atau memajukan karir mu dengan lebih dari 100 kursus dan sertifikat profesional</p>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <div class="pelatihan-item card shadow border rounded-3">
                     <img class="rounded shadow" src="<?= base_url('uploads/pelatihan/' . $row->cover_img) ?>" alt="Cover Pelatihan">
                     <div class="card-body">
-                        <span class="badge rounded-pill text-uppercase border-2 text-dark mb-2 font-8">Primary</span>
+                        <!-- <span class="badge rounded-pill text-uppercase border-2 text-dark mb-2 font-8">Primary</span> -->
                         <h5 class="mb-1 font-16"><?= $row->judul ?></h5>
                         <p class="text-muted mb-2 font-14">By <?= $row->pemateri ?></p>
                         <?php if($row->diskon != 0): ?>

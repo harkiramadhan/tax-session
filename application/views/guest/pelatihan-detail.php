@@ -19,9 +19,9 @@
             <div class="row">
                 <div class="col-lg-8 col-12">
                     <div class="head-section">
-                        <h4 class="text-white mb-1 font-32 weight-reguler"><?= $pelatihan->judul ?></h4>
-                        <p class="text-white mb-2 font-18 weight-light">Mulailah, beralih, atau memajukan karir mu dengan lebih dari 100 kursus dan sertifikat profesional</p>
-                        <div class="badge rounded-pill mb-2 text-bg-danger font-8 weight-light py-2 px-3">Beginner</div>
+                        <p class="text-white mb-2 font-18 weight-light">Judul Pelatihan</p>
+                        <h4 class="text-white mb-2 font-32 weight-reguler"><?= $pelatihan->judul ?></h4>
+                        <!-- <div class="badge rounded-pill mb-2 text-bg-danger font-8 weight-light py-2 px-3">Beginner</div> -->
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <div class="col-lg-4">
                 <div class="deskripsi-pelatihan-kanan">
                     <div class="pelatihan-item card shadow border-0 rounded-3 mb-4">
-                        <img class="rounded shadow" src="<?= base_url('uploads/pelatihan/' . $pelatihan->cover_img) ?>" alt="Cover Pelatihan" style="height: 249px;">
+                        <img class="rounded shadow" src="<?= base_url('uploads/pelatihan/' . $pelatihan->cover_img) ?>" alt="Cover Pelatihan" style="height: 249px; object-fit: cover;">
                         <div class="card-body">
                             <ul class="detail-info">
                                 <li class="detail-info-item mb-2">
@@ -109,11 +109,8 @@
                         </div>
                     </div>
                     <div class="deskripsi-pelatihan shadow border rounded rounded-4 px-4 py-4 mb-4 position-relative text-center">
-                        <div class="badge rounded-pill mb-2 text-bg-danger font-12 weight-light py-2 px-3">TENTANG TUTOR</div>
-                        <br>
-                        <img class="rounded rounded-circle my-2" src="http://localhost/tax-session/uploads/pelatihan/39bb136be363401a1ce9408d07207457.jpg" style="object-fit: cover;height: 120px;width: 120px; border: solid 5px #751119;" alt="Cover Pelatihan">
-                        <p class="text-center font-16 weight-bold mb-1"><?= $pelatihan->pemateri ?></p>
-                        <p class="font-14 mb-1" style="text-align: justify; color: #7E7E7E;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae tincidunt mauris. Praesent sagittis rutrum augue id sodales. Morbi vulputate interdum ullamcorper. In in lorem sed risus suscipit laoreet. Donec laoreet sapien nec purus tempor auctor. Integer at magna nec elit fringilla ultrices ut ac felis. Cras nec blandit arcu.</p>
+                        <div class="badge rounded-pill mb-3 text-bg-danger font-12 weight-light py-2 px-3">TENTANG TUTOR</div>
+                        <p class="text-center font-18 weight-bold mb-1"><?= $pelatihan->pemateri ?></p>
                     </div>
                 </div>
 
