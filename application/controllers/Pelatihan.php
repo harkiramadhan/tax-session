@@ -96,6 +96,7 @@ class Pelatihan extends CI_Controller{
             ]);
             if($cek->num_rows() > 0){
                 $this->session->set_flashdata('error', "Anda Sudah Terdaftar");
+                redirect($_SERVER['HTTP_REFERER']);
             }else{
                 $dataInsert = [
                     'pelatihan_id' => $this->input->post('pelaid', TRUE),
