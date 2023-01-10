@@ -22,7 +22,8 @@ class Landing extends CI_Controller{
 			'benefits' => $this->M_Benefit->getActive(),
 			'class' => $this->M_Pelatihan->getActive(3),
 			'faqs' => $this->M_Faq->getActive(),
-			'testimoni' => $this->M_Testimoni->getActive()
+			'testimoni' => $this->M_Testimoni->getActive(),
+			'setting' => $this->db->get_where('settings', ['id' => 1])->row(),
 		];
 
 		$this->load->view('layout/guest/header', $var);

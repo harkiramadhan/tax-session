@@ -13,9 +13,10 @@
                         <div class="col-3 col-md-3 mb-3">
                             <h5 class="mb-4">SOCIAL MEDIA</h5>
                             <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                            <li class="nav-item mb-2"><a href="<?= $setting->facebook ?>" class="nav-link p-0 text-muted">Facebook</a></li>
+                            <li class="nav-item mb-2"><a href="<?= $setting->instagram ?>" class="nav-link p-0 text-muted">Instagram</a></li>
+                            <li class="nav-item mb-2"><a href="<?= $setting->tiktok ?>" class="nav-link p-0 text-muted">Tiktok</a></li>
+                            <li class="nav-item mb-2"><a href="<?= $setting->youtube ?>" class="nav-link p-0 text-muted">Youtube</a></li>
                             </ul>
                         </div>
 

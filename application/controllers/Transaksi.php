@@ -10,6 +10,7 @@ class Transaksi extends CI_Controller{
     function index(){
         $var = [
             'title' => 'Cek Transaksi',
+            'setting' => $this->db->get_where('settings', ['id' => 1])->row(),
             'ajax' => [
                 'transaksi'
             ]

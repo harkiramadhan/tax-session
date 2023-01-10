@@ -28,6 +28,7 @@ class Pelatihan extends CI_Controller{
 			'next' => $next,
 			'previous' => $previous,
 			'page' => $halaman,
+            'setting' => $this->db->get_where('settings', ['id' => 1])->row(),
         ];
 
 		$this->load->view('layout/guest/header', $var);
@@ -39,7 +40,8 @@ class Pelatihan extends CI_Controller{
         $pelatihan = $this->M_Pelatihan->getByFlag($flag);
         $var = [
             'title' => 'Detail Pelatihan ' . $pelatihan->judul,
-            'pelatihan' => $pelatihan
+            'pelatihan' => $pelatihan,
+            'setting' => $this->db->get_where('settings', ['id' => 1])->row(),
         ];
 
 		$this->load->view('layout/guest/header', $var);
@@ -81,7 +83,8 @@ class Pelatihan extends CI_Controller{
         $pelatihan = $this->M_Pelatihan->getByFlag($flag);
         $var = [
             'title' => 'Form Daftar Pelatihan ' . $pelatihan->judul,
-            'pelatihan' => $pelatihan
+            'pelatihan' => $pelatihan,
+            'setting' => $this->db->get_where('settings', ['id' => 1])->row(),
         ];
 
 		$this->load->view('layout/guest/header', $var);
