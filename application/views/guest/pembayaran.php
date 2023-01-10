@@ -47,7 +47,7 @@
         
         <h5 class="text-center my-3 weight-semi">Ingin melihat status transaksi?</h5>
             <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler" data-url="" type="button">Cek Transakasi Sekarang</button>
-        <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="http://localhost/tax-session/pelatihan" type="button">KEMBALI</button>
+        <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>
             
         <section class="mb-4">
             <div class="text-center">

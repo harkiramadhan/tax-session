@@ -72,7 +72,7 @@
         
         <h5 class="text-center my-3 weight-semi">Sudah Bayar?</h5>
         <button class="btn btn-light bg-primary-red mb-3 py-3 text-white rounded-pill w-100 text-uppercase border-0 shadow font-16 weight-semi btn-redirect" data-url="https://wa.me/<?= $setting->kontak ?>" type="button">KONFIRMASI SEKARANG</button>
-        <button class="btn btn-light border mb-2 py-3 text-muted rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('transaksi') ?>" type="button">CEK STATUS PEMBAYARAN</button>
+        <button class="btn btn-light border mb-2 py-3 text-muted rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('pelatihan/' . $pelatihan->flag . '/status/' . $peserta->id) ?>" type="button">CEK STATUS PEMBAYARAN</button>
         <p class="text-sm mb-3 text-center text-muted"><small><i>Pastikan anda telah melakukan pembayaran dan konfirmasi kepada CS kami sebelum cek status pembayaran.</i></small></p>
 
         <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>
