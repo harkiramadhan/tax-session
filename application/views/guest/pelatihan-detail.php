@@ -38,12 +38,12 @@
                 </div>
 
                 <!-- PERTANYAAN -->
-                <section class="mb-4 d-lg-block d-none">
+                <section class="mb-4">
                     <div class="text-center">
-                        <div class="card border-0 tanyalebihlanjut-item-pelatihan align-items-center">
-                            <p class="text-white mb-2 font-32 weight-reguler">Tertarik dengan Pelatihan kami?</p>
-                            <p class="text-white mb-4 font-14">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We</p>
-                            <button class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3">Tanya Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+                        <div class="card border tanyalebihlanjut-item-pelatihan bg-light align-items-center">
+                            <p class="mb-2 font-32 weight-reguler">Mengalami kendala ketika mengikuti kelas?</p>
+                            <p class="mb-4 font-14">Tim kami akan membantu anda dengan senang hati. Klik tombol konsultasi beriut.</p>
+                            <button class="btn btn-light border btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3 btn-redirect" data-url="https://wa.me/<?= $setting->kontak ?>">Konsultasi Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
                         </div>
                     </div>
                 </section>
@@ -115,12 +115,12 @@
                 </div>
 
                 <!-- PERTANYAAN -->
-                <section class="mb-4 d-lg-none d-block">
+                <section class="d-lg-none d-block mb-4">
                     <div class="text-center">
-                        <div class="card border-0 tanyalebihlanjut-item-pelatihan align-items-center">
-                            <p class="text-white mb-2 font-32 weight-reguler">Tertarik dengan Pelatihan kami?</p>
-                            <p class="text-white mb-4 font-14">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We</p>
-                            <button class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3">Tanya Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+                        <div class="card border tanyalebihlanjut-item-pelatihan bg-light align-items-center">
+                            <p class="mb-2 font-32 weight-reguler">Mengalami kendala ketika mengikuti kelas?</p>
+                            <p class="mb-4 font-14">Tim kami akan membantu anda dengan senang hati. Klik tombol konsultasi beriut.</p>
+                            <button class="btn btn-light border btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3 btn-redirect" data-url="https://wa.me/<?= $setting->kontak ?>">Konsultasi Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
                         </div>
                     </div>
                 </section>
