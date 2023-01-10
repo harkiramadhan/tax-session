@@ -92,20 +92,24 @@
                 <div class="row statistik-list mb-4">
                     <div class="col-lg-4">
                         <div class="card border-0 text-center p-3">
-                            <h1 class="mb-0">21</h1>
-                            <p>Pengajar</p>
+                            <h1 class="mb-0">
+                                <?php
+                                    $kelas = $this->db->get_where('pelatihan', ['status' => 1])->num_rows();
+                                    echo $kelas;
+                                ?>
+                            </h1>
+                            <p>Kelas</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card border-0 text-center p-3">
-                            <h1 class="mb-0">21</h1>
-                            <p>Pengajar</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card border-0 text-center p-3">
-                            <h1 class="mb-0">21</h1>
-                            <p>Pengajar</p>
+                            <h1 class="mb-0">
+                                <?php
+                                    $peserta = $this->db->select('id')->get('peserta')->num_rows();
+                                    echo $peserta;
+                                ?>
+                            </h1>
+                            <p>Peserta</p>
                         </div>
                     </div>
                 </div>                            
