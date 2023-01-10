@@ -18,14 +18,14 @@
         <div class="px-4 py-3 mb-4 border d-flex flex-lg-row flex-column" style="border-radius: 25px;">
             <div class="order-lg-1 order-2">
                 <p class="text-sm mb-1"><small>Nomor Rekening</small></p>
-                <h5 class="mb-2 text-primary weight-semi font-36">1270009870765<div class="material-symbols-outlined text-dark ms-2">content_copy</div></h5>
+                <h5 class="mb-2 text-primary weight-semi font-36"><?= $setting->norek ?><div class="material-symbols-outlined text-dark ms-2">content_copy</div></h5>
                 <p class="text-sm mb-1"><small>Nama Bank</small></p>
-                <h5 class="mb-2">Mandiri</h5>
+                <h5 class="mb-2"><?= $setting->bank ?></h5>
                 <p class="text-sm mb-1"><small>Atas Nama</small></p>
-                <h5 class="mb-2">Ahmad Harki Ramadhan</h5>
+                <h5 class="mb-2"><?= $setting->nama ?></h5>
             </div>
             <div class="order-lg-2 order-1 ms-lg-auto ms-0 mb-4">
-                <img class="" src="http://localhost/tax-session/assets/img/c3b65117cb6be5729fabd3da52d33d15.png" alt="Cover Pelatihan" style=" height: auto; width: 130px;">
+                <img class="" src="<?= base_url('assets/img/' . $setting->logo_bank) ?>" alt="Cover Pelatihan" style=" height: auto; width: 130px;">
             </div>
         </div>
 
@@ -37,7 +37,7 @@
                 <ol class="mt-5 ps-4 mb-0">
                     <li>Transfer menggunakan ATM/Mobile Banking anda</li>
                     <li>Pilih bank tujuan <span class="weight-semi">Mandiri</span></li>
-                    <li>Transfer dengan nomor rekening <span class="weight-semi">1270009870765</span> atas nama Ahmad Harki Ramadhan</li>
+                    <li>Transfer dengan nomor rekening <span class="weight-semi"><?= $setting->norek ?></span> atas nama <?= $setting->nama ?></li>
                     <li>Sejumlah <span class="weight-semi"> nominal transaksimu</span>  <span class="text-danger">Bayar Sampai 3 digit terahir</span></li>
                     <li>Konfirmasi ke CS melalui tombol "Konfirmasi Sekarang" di bawah</li>
                     <li>Jangan lupa lampirkan gambar bukti transfer anda.</li>
@@ -46,8 +46,8 @@
         </div>
         
         <h5 class="text-center my-3 weight-semi">Ingin melihat status transaksi?</h5>
-            <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler" data-url="" type="button">Cek Transakasi Sekarang</button>
-        <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>
+            <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('transaksi') ?>" type="button">Cek Transakasi Sekarang</button>
+        <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi btn-redirect" data-url="<?= site_url('') ?>" type="button">KEMBALI</button>
             
         <section class="mb-4">
             <div class="text-center">
