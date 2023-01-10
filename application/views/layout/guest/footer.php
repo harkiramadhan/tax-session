@@ -39,6 +39,9 @@
         </section>
         <!-- FOOTER DONE -->
 
+        <script>
+            var baseUrl = '<?= site_url() ?>'
+        </script>
         <!-- Boostrap Js -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
@@ -54,5 +57,13 @@
         <!-- Custom Js -->
         <script src="<?= base_url('assets/js/custom-slick.js') ?>"></script>
 
+        <?php 
+            if(@$ajax) {
+                foreach(@$ajax as $a){
+                    echo "<script src='".base_url('assets/js/custom/' . $a).".js'></script>";
+                }
+            }
+                
+        ?>
     </body>
 </html>

@@ -33,9 +33,12 @@
                     ?>
                     <h5 class="mb-2"><?= $pelatihan->waktu." - ".$tanggal ?></h5>
                     <p class="text-sm mb-1"><small>Pembayaran</small></p>
-                    <h5 class="mb-2"><strong><?= discount($pelatihan->harga, $pelatihan->diskon) ?></strong></h5>
+                    <?php 
+                        $rand = mt_rand(100,999);
+                    ?>
+                    <h5 class="mb-2"><strong><?= discount($pelatihan->harga, $pelatihan->diskon, $rand) ?></strong></h5>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4"> 
                     <img class="d-none d-lg-block rounded shadow w-100" src="<?= base_url('uploads/pelatihan/' . $pelatihan->cover_img) ?>" alt="Cover Pelatihan">
                 </div>
             </div>
@@ -44,6 +47,7 @@
         <form method="post" action="<?= site_url('pelatihan/register') ?>">
             <input type="hidden" name="robot" value="">
             <input type="hidden" name="pelaid" value="<?= $pelatihan->id ?>">
+            <input type="hidden" name="nominal" value="<?= discount($pelatihan->harga, $pelatihan->diskon, $rand) ?>">
             <div class="mb-3">
                 <label for="" class="form-label">Nama Lengkap</label>
                 <input type="text" class="form-control rounded rounded-pill py-3 px-4" name="nama" aria-describedby="" placeholder="Tulis nama lengkapmu" required>

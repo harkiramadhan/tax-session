@@ -87,10 +87,10 @@
 								<label for="" class="form-control-label">Status Kegiatan <spanclass="text-danger">*</span></label>
 									<select name="status_kegiatan" class="form-control" required="">
 									<option value="">- Pilih Status Kegiatan -</option>
-									<option value="1">Belum Berjalan</option>
-									<option value="2">Sedang Berjalan</option>
-									<option value="3">Sudah Berjalan</option>
-									<option value="4" >Selesai</option>
+									<option <?= ($pelatihan->status_kegiatan == 1) ? 'selected' : '' ?> value="1">Belum Berjalan</option>
+									<option <?= ($pelatihan->status_kegiatan == 2) ? 'selected' : '' ?> value="2">Sedang Berjalan</option>
+									<option <?= ($pelatihan->status_kegiatan == 3) ? 'selected' : '' ?> value="3">Sudah Berjalan</option>
+									<option <?= ($pelatihan->status_kegiatan == 4) ? 'selected' : '' ?> value="4" >Selesai</option>
 								</select>
 							</div>
 						</div>

@@ -49,7 +49,7 @@
                             <button type="button" class="d-lg-none d-block btn btn-md btn-light rounded-pill" style="padding: 12px 30px; font-weight: 600;">CEK TRANSAKSI</button>
                         </li>
                     </ul>
-                    <button type="button" class="d-lg-block d-none btn btn-md btn-light rounded-pill font-14" style="padding: 12px 30px; font-weight: 600;">CEK TRANSAKSI</button>
+                    <button type="button" class="d-lg-block d-none btn btn-md btn-light rounded-pill font-14 btn-redirect" data-url="<?= site_url('transaksi') ?>" style="padding: 12px 30px; font-weight: 600;">CEK TRANSAKSI</button>
                 </div>
             </div>
         </nav>

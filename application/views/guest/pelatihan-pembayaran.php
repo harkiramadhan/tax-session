@@ -45,9 +45,9 @@
                 <p class="text-sm mb-1"><small>Atas Nama</small></p>
                 <h5 class="mb-2"><?= $setting->nama ?></h5>
                 <p class="text-sm mb-1"><small>Amount to Pay - <span class="text-warning">Bayar Sampai 3 digit terahir</span></small></p>
-                <h5 class="mb-2"><?= discount($pelatihan->harga, $pelatihan->diskon) ?><div class="material-symbols-outlined text-dark ms-2 font-16">content_copy</div></h5>
+                <h5 class="mb-2"><?= $peserta->nominal ?><div class="material-symbols-outlined text-dark ms-2 font-16">content_copy</div></h5>
                 <p class="text-sm mb-1"><small>ID Transaksi</small></p>
-                <h5 class="mb-2">#2102012</h5>
+                <h5 class="mb-2">#<?= sprintf("%06d", $peserta->id) ?></h5>
             </div>
             <div class="order-lg-2 order-1 ms-lg-auto ms-0 mb-4">
                 <img class="" src="<?= base_url('assets/img/' . $setting->logo_bank) ?>" alt="Cover Pelatihan" style=" height: auto; width: 130px;">
@@ -62,8 +62,8 @@
                 <ol class="mt-5 ps-4 mb-0">
                     <li>Transfer menggunakan ATM/Mobile Banking anda</li>
                     <li>Pilih bank tujuan <span class="weight-semi"><?= $setting->bank ?></span></li>
-                    <li>Transfer dengan nomor rekening <span class="weight-semi"><?= $setting->norek ?></span> atas nama <?= $setting->nama ?></li>
-                    <li>Sejumlah <span class="weight-semi"> <?= discount($pelatihan->harga, $pelatihan->diskon) ?></span>  <span class="text-danger">Bayar Sampai 3 digit terahir</span></li>
+                    <li>Transfer dengan nomor rekening <span class="weight-semi"><?= $setting->norek ?></span> atas nama <strong><?= $setting->nama ?></strong></li>
+                    <li>Sejumlah <span class="weight-semi"> <?= $peserta->nominal ?></span>  <span class="text-danger">Bayar Sampai 3 digit terahir</span></li>
                     <li>Konfirmasi ke CS melalui tombol "Konfirmasi Sekarang" di bawah</li>
                     <li>Jangan lupa lampirkan gambar bukti transfer anda.</li>
                 </ol>
@@ -72,7 +72,7 @@
         
         <h5 class="text-center my-3 weight-semi">Sudah Bayar?</h5>
         <button class="btn btn-light bg-primary-red mb-3 py-3 text-white rounded-pill w-100 text-uppercase border-0 shadow font-16 weight-semi btn-redirect" data-url="https://wa.me/<?= $setting->kontak ?>" type="button">KONFIRMASI SEKARANG</button>
-        <button class="btn btn-light border mb-2 py-3 text-muted rounded-pill w-100 text-uppercase font-16 weight-reguler" data-url="" type="button">CEK STATUS PEMBAYARAN</button>
+        <button class="btn btn-light border mb-2 py-3 text-muted rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('transaksi') ?>" type="button">CEK STATUS PEMBAYARAN</button>
         <p class="text-sm mb-3 text-center text-muted"><small><i>Pastikan anda telah melakukan pembayaran dan konfirmasi kepada CS kami sebelum cek status pembayaran.</i></small></p>
 
         <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>

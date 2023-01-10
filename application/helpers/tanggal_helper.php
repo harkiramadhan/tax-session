@@ -365,12 +365,16 @@
         return $hasil_rupiah;
     }
 
-    function discount($price, $discount){
+    function discount($price, $discount, $rand = FALSE){
         $total = $price - ($price * ($discount/100));
         if($total == 0){
             $hasil_rupiah = "GRATIS";
         }else{
-            $hasil_rupiah = "Rp " . number_format($total,0,',','.');
+            if($rand){
+                $hasil_rupiah = "Rp " . number_format($total + $rand,0,',','.');
+            }else{
+                $hasil_rupiah = "Rp " . number_format($total,0,',','.');
+            }
         }
         return $hasil_rupiah;
     }
