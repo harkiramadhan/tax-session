@@ -68,8 +68,8 @@
 }
 
 .list-partner img{
-    /* width: 160px !important;
-    height: auto; */
+    width: 160px !important;
+    height: auto;
 }
 
 .list-partner .slick-prev, .list-partner .slick-next {
@@ -93,6 +93,7 @@
 .list-partner .slick-slide {
     display: flex !important;
     justify-content: center;
+    width: 100px;
 }
 
 .list-banner {

@@ -1,18 +1,19 @@
 $(document).ready(function(){
     $('.list-partner').slick({
         infinite: true,
-        centerPadding: '40px',
-        slidesToShow: 4,
+        centerPadding: '10px',
+        slidesToShow: 5,
         slidesToScroll: 1,
+        // variableWidth: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         arrows: false,
         responsive: [
             {
             breakpoint: 1200,
             settings:
                 {
-                    slidesToShow: 4,
+                    slidesToShow:4,
                     slidesToScroll: 1,
                 },
             },
@@ -20,7 +21,7 @@ $(document).ready(function(){
                 breakpoint: 800,
                 settings:
                 {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 },
             },
@@ -28,7 +29,7 @@ $(document).ready(function(){
                 breakpoint: 600,
                 settings:
                 {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             }
