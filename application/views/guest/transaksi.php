@@ -30,7 +30,7 @@
             <!-- DONE -->
         </div>
 
-        <button class="btn btn-light mb-4 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="http://localhost/tax-session/pelatihan" type="button">KEMBALI</button>
+        <button class="btn btn-light mb-4 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi" data-url="<?= site_url('pelatihan') ?>" type="button">KEMBALI</button>
         
         <section class="mb-4">
             <div class="text-center">
