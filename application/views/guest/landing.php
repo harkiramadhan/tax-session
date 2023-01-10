@@ -63,9 +63,9 @@
                 <div class="col-lg-4">
                     <div class="card-benefit card border-0 p-3" <?= ($no == 2) ? 'style="background: #751119;"' : '' ?>>
                         <div class="card-body">
-                            <img class="mb-5 <?= ($no == 2) ? 'text-white' : '' ?>" src="<?= base_url('assets/img/guest/img-banner.png') ?>" alt="">
-                            <h4 class="mb-3 <?= ($no == 2) ? 'text-white' : '' ?>">The New Way to Achieve Good Skills</h4>
-                            <p class="mb-0 <?= ($no == 2) ? 'text-white' : '' ?>">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on</p>
+                            <img class="mb-5 <?= ($no == 2) ? 'text-white' : '' ?>" src="<?= base_url('uploads/benefit/' . $bnr->img) ?>" alt="">
+                            <h4 class="mb-3 <?= ($no == 2) ? 'text-white' : '' ?>"><?= $bnr->judul ?></h4>
+                            <p class="mb-0 <?= ($no == 2) ? 'text-white' : '' ?>"><?= $bnr->deskripsi ?></p>
                         </div>
                     </div>    
                 </div>
