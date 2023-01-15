@@ -9,7 +9,7 @@
 }
 #header-landing {
     border-bottom-left-radius: 50px 50px;
-    border-bottom-right-radius: 50px 50px;
+    /* border-bottom-right-radius: 50px 50px; */
     /* border-bottom-right-radius: 50% 20%; */
 }
 

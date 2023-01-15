@@ -48,9 +48,9 @@
 <!-- BANNER END -->
 
 <!-- BENEFIT PELATIHAN -->
-<section id="benefit">
+<section id="benefit" class="py-5">
     <div class="container container-extend">
-        <div class="head-section py-5">
+        <div class="head-section">
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
             <h1 class="ms--2">Benefit <span>Pelatihan</span></h1>
         </div>
@@ -136,7 +136,7 @@
                     <h1 class="ms--2">Ikuti <span>Pelatihan</span> Berikut</h1>
                 </div>
             </div>
-            <div class="col text-end">                        
+            <div class="col text-lg-end text-start">                        
                 <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto btn-redirect border" data-url="<?= site_url('pelatihan') ?>">Lihat Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
             </div>
         </div>
