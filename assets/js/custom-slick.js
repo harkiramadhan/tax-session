@@ -45,7 +45,7 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         arrows: true,
         prevArrow:'<button type="button" class="btn btn-dark rounded-circle banner-button-prev"><span class="material-symbols-outlined">arrow_back</span></button>',
-        nextArrow:'<button type="button" class="btn btn-dark roun,ded-circle banner-button-next"><span class="material-symbols-outlined">arrow_forward</span></button>',
+        nextArrow:'<button type="button" class="btn btn-dark rounded-circle banner-button-next"><span class="material-symbols-outlined">arrow_forward</span></button>',
 
         responsive: [
             {
