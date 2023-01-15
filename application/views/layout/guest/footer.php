@@ -3,14 +3,14 @@
             <div class="container container-extend">
                 <footer class="py-5">
                     <div class="row">
-                        <div class="col-5 col-md-5 mb-3">
+                        <div class="col-12 col-md-5 mb-3">
                             <h5 class="mb-4">TAX SESSION</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet pellentesque velit. Cras aliquam pretium urna, nec faucibus nisi consectetur.</p>
                         </div>
 
-                        <div class="col-1 col-md-1"></div>
+                        <div class="col-12 col-md-1"></div>
 
-                        <div class="col-3 col-md-3 mb-3">
+                        <div class="col-12 col-md-3 mb-3">
                             <h5 class="mb-4">SOCIAL MEDIA</h5>
                             <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="<?= $setting->facebook ?>" class="nav-link p-0 text-muted">Facebook</a></li>
@@ -20,7 +20,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-3 col-md-3 mb-3">
+                        <div class="col-12 col-md-3 mb-3">
                             <h5 class="mb-4">ALAMAT & KONTAK</h5>
                             <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ruko Dynasty Walk kav 29B/15, Jln Jalur Sutera, Alam Sutera, </a></li>

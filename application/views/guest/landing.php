@@ -5,11 +5,11 @@
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
 
-                <div class="mx-5">
+                <div class="mx-5 justify-items-start">
                     <p class="text-uppercase text-white">We provide tons of pathskill</p>
                     <h1 class="text-white">The New Way to Achieve Good Skills</h1>
-                    <p class="text-white">We provide tons of pathskill that you can choose and focus on</p>
-                    <button class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3">Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+                    <p class="text-white mb-3">We provide tons of pathskill that you can choose and focus on</p>
+                    <a class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3" href="<?= site_url('pelatihan') ?>" style="width: fit-content;">Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></a>
                 </div>
                 
             </div>
@@ -27,9 +27,9 @@
 <section id="partner" class="container container-extend py-5">
     <div class="list-partner d-flex justify-content-around align-items-center">
         <?php foreach($partners->result() as $pr){ ?>
-            <div>
+            <a href="<?= $pr->link ?>" target="_blank">
                 <img src="<?= base_url('uploads/partner/' . $pr->img) ?>" alt="">
-            </div>    
+            </a>    
         <?php } ?>
     </div>
 </section>
@@ -39,9 +39,9 @@
 <section id="banner">
     <div class="container container-extend list-banner">
         <?php foreach($banners->result() as $rb){ ?>
-            <div class="banner-item">
+            <a class="banner-item" href="<?= $pr->link ?>" target="_blank">
                 <img src="<?= base_url('uploads/banners/' . $rb->img) ?>" alt="">
-            </div>
+            </a>
         <?php } ?>
     </div>
 </section>
@@ -61,7 +61,7 @@
                 foreach($benefits->result() as $bnr){ 
             ?>
                 <div class="col-lg-4">
-                    <div class="card-benefit card border-0 p-3" <?= ($no == 2) ? 'style="background: #751119;"' : '' ?>>
+                    <div class="card-benefit card border-0 p-3 mb-lg-0 mb-4" <?= ($no == 2) ? 'style="background: #751119;"' : '' ?>>
                         <div class="card-body">
                             <img class="mb-5 <?= ($no == 2) ? 'text-white' : '' ?>" src="<?= base_url('uploads/benefit/' . $bnr->img) ?>" alt="">
                             <h4 class="mb-3 <?= ($no == 2) ? 'text-white' : '' ?>"><?= $bnr->judul ?></h4>
@@ -91,7 +91,7 @@
                 
                 <div class="row statistik-list mb-0">
                     <div class="col-lg-6 col-12">
-                        <div class="card border-0 text-center p-3">
+                        <div class="card border-0 text-center p-3 mb-lg-0 mb-4">
                             <h1 class="mb-0">
                                 <?php
                                     $kelas = $this->db->get_where('pelatihan', ['status' => 1])->num_rows();
@@ -123,7 +123,7 @@
 <!-- DAFTAR PELATIHAN -->
 <section id="daftar-pelatihan" style="background: #FBF3F2;">
     <div class="container container-extend  py-5">
-        <div class="row">
+        <div class="row  mb-lg-0 mb-4">
             <div class="col-lg-7 pb-3">
                 <div class="head-section">
                     <p class="text-uppercase mb-0">We provide tons of pathskill</p>
@@ -138,7 +138,7 @@
         <div class="row">
             <?php foreach($class->result() as $cr){ ?>
                 <div class="col-lg-4">
-                    <div class="pelatihan-item card shadow border rounded-3">
+                    <div class="pelatihan-item card shadow border rounded-3 mb-lg-0 mb-3">
                         <img class="rounded shadow" src="<?= base_url('uploads/pelatihan/' . $cr->cover_img) ?>" alt="Cover Pelatihan">
                         <div class="card-body">
                             <span class="badge rounded-pill text-uppercase text-dark mb-2">Primary</span>
@@ -163,7 +163,7 @@
 <!-- FAQ -->
 <section id="daftar-faq">
     <div class="container container-extend py-5">
-        <div class="head-section">
+        <div class="head-section mb-lg-0 mb-3">
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
             <h1 class="ms--2"><span>FAQ</span></h1>
         </div>
@@ -205,7 +205,7 @@
                         <h5 class="mb-1"><?= $tr->nama ?></h5>
                         <p class="mb-3"><?= $tr->jabatan ?></p>
                     </div>
-                    <div class="d-flex align-items-center ms-5">
+                    <div class="d-flex align-items-center ms-lg-5 ms-0">
                         <p><?= $tr->deskripsi ?></p>
                     </div>
                 </div>

@@ -417,4 +417,18 @@ a:hover {
         top: 0px;
         max-width: 100% !important;
     }
+    
+    .tanyalebihlanjut-item {
+        background: #C63C32;
+        border-radius: 32px;
+        padding: 50px 40px;
+    }
+    
+    .tanyalebihlanjut-item-pelatihan {
+        background: #C63C32;
+        border-radius: 32px;
+        padding: 34px 50px;
+    }
+    
 }
+

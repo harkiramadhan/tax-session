@@ -6,12 +6,10 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">TOTAL PELATIHAN</p>
-                    <h3 class="font-weight-bolder mb-3"><?= $pelatihan->num_rows() ?></h3>
-                    <p class="mb-0">
-                        <a class="mb-0 icon-move-right text-warning" href="<?= site_url('admin/pelatihan/') ?>">Selengkapnya 
-                            <i class="fa fa-arrow-right ms-3" aria-hidden="true"></i>
-                        </a>
-                    </p>
+                    <h3 class="font-weight-bolder mt-3 mb-0" style="font-size: 52px;">
+                      <?= $pelatihan->num_rows() ?>
+                    </h3>
+                    <p class="mb-0">Pelatihan</p>
                   </div>
                 </div>
                 <div class="col-4 d-flex justify-content-end">
@@ -28,14 +26,13 @@
                 <div class="col-8">
                   <div class="numbers">
                     <p class="text-sm mb-0 text-uppercase font-weight-bold">TOTAL SELURUH PESERTA</p>
-                    <h3 class="font-weight-bolder mb-3">
-                      12
+                    <h3 class="font-weight-bolder mt-3 mb-0" style="font-size: 52px;">
+                      <?php
+                        $peserta = $this->db->select('id')->get('peserta')->num_rows();
+                        echo $peserta;
+                      ?>
                     </h3>
-                    <p class="mb-0">
-                        <a class="mb-0  icon-move-right text-warning" href="<?= site_url('admin/pelatihan/') ?>">Selengkapnya
-                          <i class="fa fa-arrow-right ms-3" aria-hidden="true"></i>
-                        </a>
-                    </p>
+                    <p class="mb-0">Peserta</p>
                   </div>
                 </div>
                 <div class="col-4 d-flex justify-content-end">
