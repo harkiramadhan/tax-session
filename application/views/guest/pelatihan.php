@@ -16,7 +16,7 @@
     <div class="container container-extend">
         <div class="rounded rounded-4 px-4 py-4 mb-4" style="background-color: #751119;">
             <div class="row">
-                <div class="col-8">
+                <div class="col-12">
                     <div class="head-section">
                         <h4 class="text-white mb-3 font-36 weight-regular">Pilih Pelatihanmu Sekarang Juga</h4>
                         <p class="text-white mb-0 font-18 weight-reguler">Mulailah, beralih, atau memajukan karir mu dengan lebih dari 100 kursus dan sertifikat profesional</p>

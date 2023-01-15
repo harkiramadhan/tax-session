@@ -38,6 +38,9 @@
         <script src="<?= base_url('assets/js/argon-dashboard.min.js?v=2.0.4') ?>"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
+        <!-- Custom JS -->
+        <script src="<?= base_url('assets/js/custom.js') ?>"></script>
+
         <?php 
             if(@$ajax) {
                 foreach(@$ajax as $a){

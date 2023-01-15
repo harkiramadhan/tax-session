@@ -7,6 +7,11 @@
 .container {
     max-width: 1040px !important;
 }
+#header-landing {
+    border-bottom-left-radius: 50px 50px;
+    border-bottom-right-radius: 50px 50px;
+    /* border-bottom-right-radius: 50% 20%; */
+}
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -38,8 +43,8 @@
 .head-section h1{
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
-    line-height: 72px;
+    font-size: 48%vw;
+    line-height: 72%vw;
     margin-left: -3px !important;
 }
 
@@ -310,31 +315,31 @@
 /* list font */
 
 .font-8 {
-    font-size: 8px !important;
+    font-size: 8%vw !important;
 }
 
 .font-12 {
-    font-size: 12px !important;
+    font-size: 12%vw !important;
 }
 
 .font-14 {
-    font-size: 14px !important;
+    font-size: 14%vw !important;
 }
 
 .font-16 {
-    font-size: 16px !important;
+    font-size: 16%vw !important;
 }
 
 .font-18 {
-    font-size: 18px !important;
+    font-size: 18%vw !important;
 }
 
 .font-32 {
-    font-size: 32px !important;
+    font-size: 32%vw !important;
 }
 
 .font-36 {
-    font-size: 36px !important;
+    font-size: 36%vw !important;
 }
 
 .weight-light {
@@ -411,6 +416,20 @@ a:hover {
     color: #751119;
 }
 
+.circle-float {
+    
+    border-radius: 50%;
+    position: absolute;
+    width: 698px;
+    height: 698px;
+    left: -124px;
+    top: 941px;
+    z-index: -10;
+
+    background: linear-gradient(134.78deg, rgba(198, 60, 50, 0.12) 17.51%, rgba(198, 60, 50, 0) 84.02%);
+
+}
+
 @media (max-width: 990px) {
     .deskripsi-pelatihan-kanan {
         position: relative;
@@ -430,5 +449,17 @@ a:hover {
         padding: 34px 50px;
     }
     
+    
 }
 
+@media (max-width: 600px) {
+    
+    .banner-button-prev {
+        display: none;
+    }
+    
+    .banner-button-next {
+        display: none;
+    }
+    
+}

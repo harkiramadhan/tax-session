@@ -55,8 +55,11 @@
         <script src="<?= base_url('assets/vendor/slick/slick.js') ?>"></script>
         <script src="<?= base_url('assets/vendor/slick/slick.min.js') ?>"></script>
         
-        <!-- Custom Js -->
+        <!-- Custom Slick Js -->
         <script src="<?= base_url('assets/js/custom-slick.js') ?>"></script>
+        
+        <!-- Custom JS -->
+        <script src="<?= base_url('assets/js/custom.js') ?>"></script>
 
         <?php 
             if(@$ajax) {

@@ -8,8 +8,8 @@
 					</div>
 					<div class="col-6 text-end">
 						<button class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#tambahTestimoni">
-							<i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;
-							<span class="d-lg-inline d-none">Testimoni</span>
+							<i class="fas fa-plus" aria-hidden="true"></i>
+							<span class="ms-lg-2 ms-0 d-lg-inline d-none">Testimoni</span>
 						</button>
 					</div>
 				</div>

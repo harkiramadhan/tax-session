@@ -7,7 +7,7 @@
                         <h6 class="mb-0">DAFTAR PELATIHAN</h6>
                     </div>
                     <div class="col-6 text-end">
-                        <a class="btn bg-gradient-dark mb-0" href="<?= site_url('admin/pelatihan/add') ?>"><i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;<span class="d-lg-inline d-none">Pelatihan</span></a>
+                        <a class="btn bg-gradient-dark mb-0" href="<?= site_url('admin/pelatihan/add') ?>"><i class="fas fa-plus" aria-hidden="true"></i><span class="ms-lg-2 ms-0 d-lg-inline d-none">Pelatihan</span></a>
                     </div>
                 </div>
             </div>

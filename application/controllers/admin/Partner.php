@@ -72,6 +72,9 @@ class Partner extends CI_Controller{
 						<div class="col-lg-12">
 							<div class="form-group mb-2">
 								<label class="form-control-label" for="input-nama">Link tujuan <span class="text-danger">*</span></label>
+								<div class="alert alert-light py-2" role="alert">
+									Tuliskan link secara lengkap. Contoh: <span class="alert-link">https://tujuan.com/</span>
+								</div>
 								<input type="text" name="link" class="form-control" placeholder="Cantumkan link pada kolom" value="<?= $partner->link ?>" required="">
 							</div>
 						</div>

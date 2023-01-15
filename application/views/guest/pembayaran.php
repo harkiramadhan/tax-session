@@ -18,7 +18,10 @@
         <div class="px-4 py-3 mb-4 border d-flex flex-lg-row flex-column" style="border-radius: 25px;">
             <div class="order-lg-1 order-2">
                 <p class="text-sm mb-1"><small>Nomor Rekening</small></p>
-                <h5 class="mb-2 text-primary weight-semi font-36"><?= $setting->norek ?><div class="material-symbols-outlined text-dark ms-2">content_copy</div></h5>
+                <h5 class="mb-2 text-primary weight-semi font-36">
+                    <span id="norek"><?= $setting->norek ?></span>
+                    <a id="copy-norek" class="material-symbols-outlined text-dark ms-2">content_copy</a>
+                </h5>
                 <p class="text-sm mb-1"><small>Nama Bank</small></p>
                 <h5 class="mb-2"><?= $setting->bank ?></h5>
                 <p class="text-sm mb-1"><small>Atas Nama</small></p>
@@ -46,7 +49,7 @@
         </div>
         
         <h5 class="text-center my-3 weight-semi">Ingin melihat status transaksi?</h5>
-            <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('transaksi') ?>" type="button">Cek Transakasi Sekarang</button>
+        <button class="btn btn-light border mb-2 py-3 px-4 text-dark rounded-pill w-100 text-uppercase font-16 weight-reguler btn-redirect" data-url="<?= site_url('transaksi') ?>" type="button">Cek Transakasi Sekarang</button>
         <button class="btn btn-light mb-3 py-2 text-gray rounded-pill w-100 text-uppercase btn-redirect font-16 weight-semi btn-redirect" data-url="<?= site_url('') ?>" type="button">KEMBALI</button>
             
         <section class="mb-4">

@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-lg-6 d-flex align-items-center">
 
-                <div class="mx-5 justify-items-start">
+                <div class="mx-lg-5 mx-3 pt-4 justify-items-start">
                     <p class="text-uppercase text-white">We provide tons of pathskill</p>
-                    <h1 class="text-white">The New Way to Achieve Good Skills</h1>
-                    <p class="text-white mb-3">We provide tons of pathskill that you can choose and focus on</p>
+                    <h1 class="text-white"><span class="weight-bolder">The New</span> Way <br> to Achieve <span class="weight-bolder">Good Skills</span></h1>
+                    <p class="text-white mb-3">We provide tons of pathskill that you <br> can choose and focus on</p>
                     <a class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3" href="<?= site_url('pelatihan') ?>" style="width: fit-content;">Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></a>
                 </div>
                 
@@ -48,7 +48,7 @@
 <!-- BANNER END -->
 
 <!-- BENEFIT PELATIHAN -->
-<section id="benefit" class="py-5">
+<section id="benefit">
     <div class="container container-extend">
         <div class="head-section py-5">
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
@@ -61,7 +61,7 @@
                 foreach($benefits->result() as $bnr){ 
             ?>
                 <div class="col-lg-4">
-                    <div class="card-benefit card border-0 p-3 mb-lg-0 mb-4" <?= ($no == 2) ? 'style="background: #751119;"' : '' ?>>
+                    <div class="card-benefit card border p-3 mb-lg-0 mb-4" <?= ($no == 2) ? 'style="background: #751119;"' : '' ?>>
                         <div class="card-body">
                             <img class="mb-5 <?= ($no == 2) ? 'text-white' : '' ?>" src="<?= base_url('uploads/benefit/' . $bnr->img) ?>" alt="">
                             <h4 class="mb-3 <?= ($no == 2) ? 'text-white' : '' ?>"><?= $bnr->judul ?></h4>
@@ -72,6 +72,9 @@
             <?php $no++; } ?>
         </div>
     </div>
+
+    <div class="circle-float d-lg-block d-none">
+    </div>
 </section>
 <!-- BENEFIT PELATIHAN DONE -->
 
@@ -79,7 +82,7 @@
 <section id="pelatihan">
     <div class="container container-extend py-5">
         <div class="row">
-            <div class="col-lg-6 d-flex justify-content-center">
+            <div class="col-lg-6 d-flex justify-content-center d-lg-block d-none">
                 <img src="<?= base_url('/assets/img/guest/img-header-main.svg') ?>" alt="" class="w-75">
             </div>
             <div class="col-lg-6">
@@ -87,7 +90,7 @@
                     <p class="text-uppercase mb-0">We provide tons of pathskill</p>
                     <h1 class="ms--2">Statistik<span> Pelatihan</span></h1>
                 </div>
-                <p>We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill</p>
+                <p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 
                 <div class="row statistik-list mb-0">
                     <div class="col-lg-6 col-12">
@@ -112,6 +115,9 @@
                             <p>Peserta</p>
                         </div>
                     </div>
+                    <div class="col-12 mt-3">
+                        <a class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3 border" href="<?= site_url('pelatihan') ?>" style="width: fit-content;">Selengkapnya<span class="material-symbols-outlined ms-3">arrow_forward</span></a>
+                    </div>
                 </div>                            
                 
             </div>
@@ -131,14 +137,14 @@
                 </div>
             </div>
             <div class="col text-end">                        
-                <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto btn-redirect" data-url="<?= site_url('pelatihan') ?>">Lebih Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+                <button class="btn btn-light btn-icon-session btn-icon-session-light rounded-pill d-flex align-items-center px-1 ps-3 ms-auto btn-redirect border" data-url="<?= site_url('pelatihan') ?>">Lihat Semua<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
             </div>
         </div>
 
         <div class="row">
             <?php foreach($class->result() as $cr){ ?>
                 <div class="col-lg-4">
-                    <div class="pelatihan-item card shadow border rounded-3 mb-lg-0 mb-3">
+                    <div class="pelatihan-item card shadow border rounded-3 mb-3">
                         <img class="rounded shadow" src="<?= base_url('uploads/pelatihan/' . $cr->cover_img) ?>" alt="Cover Pelatihan">
                         <div class="card-body">
                             <span class="badge rounded-pill text-uppercase text-dark mb-2">Primary</span>
@@ -222,7 +228,7 @@
         <div class="card border-0 tanyalebihlanjut-item align-items-center">
             <h1 class="text-white mb-4">Tertarik dengan Pelatihan kami?</h1>
             <p class="text-white mb-4">We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We provide tons of pathskill that you can choose and focus on We</p>
-            <button class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3">Tanya Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
+            <button class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3 btn-redirect" data-url="https://wa.me/<?= $setting->kontak ?>">Tanya Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></button>
         </div>
     </div>
 </section>

@@ -39,13 +39,19 @@
         <div class="px-4 py-3 mb-4 border d-flex flex-lg-row flex-column" style="border-radius: 25px;">
             <div class="order-lg-1 order-2">
                 <p class="text-sm mb-1"><small>Nomor Rekening</small></p>
-                <h5 class="mb-2 text-primary weight-semi font-36"><?= $setting->norek ?><div class="material-symbols-outlined text-dark ms-2">content_copy</div></h5>
+                <h5 class="mb-2 text-primary weight-semi font-36">
+                    <span id="norek"><?= $setting->norek ?></span>
+                    <a id="copy-norek" class="material-symbols-outlined text-dark ms-2">content_copy</a>
+                </h5>
                 <p class="text-sm mb-1"><small>Nama Bank</small></p>
                 <h5 class="mb-2"><?= $setting->bank ?></h5>
                 <p class="text-sm mb-1"><small>Atas Nama</small></p>
                 <h5 class="mb-2"><?= $setting->nama ?></h5>
                 <p class="text-sm mb-1"><small>Amount to Pay - <span class="text-warning">Bayar Sampai 3 digit terahir</span></small></p>
-                <h5 class="mb-2"><?= $peserta->nominal ?><div class="material-symbols-outlined text-dark ms-2 font-16">content_copy</div></h5>
+                <h5 class="mb-2">
+                    <span id="nominal"><?= $peserta->nominal ?></span>
+                    <div id="copy-nominal" class="material-symbols-outlined text-dark ms-2 font-16">content_copy</div>
+                </h5>
                 <p class="text-sm mb-1"><small>ID Transaksi</small></p>
                 <h5 class="mb-2">#<?= sprintf("%06d", $peserta->id) ?></h5>
             </div>

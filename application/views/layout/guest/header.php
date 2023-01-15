@@ -29,7 +29,7 @@
             <div class="container container-extend">
                 <a class="navbar-brand" href="<?= site_url() ?>">
                     <img src="<?= base_url('/assets/img/main-logo-white.svg') ?>" alt="Logo" class="d-inline-block align-text-center" style="height: 38px;">
-                    <span class="d-lg-inline d-none text-white ms-1 font-weight-bolder font-18">Tax Session</span>
+                    <span class=" text-white ms-1 font-weight-bolder font-18">Tax Session</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

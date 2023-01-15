@@ -8,8 +8,8 @@
 					</div>
 					<div class="col-6 text-end">
 						<button class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#tambahBanner">
-							<i class="fas fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;
-							<span class="d-lg-inline d-none">Banner</span>
+							<i class="fas fa-plus" aria-hidden="true"></i>
+							<span class="ms-lg-2 ms-0 d-lg-inline d-none">Banner</span>
 						</button>
 					</div>
 				</div>
@@ -102,6 +102,9 @@
 					<div class="col-lg-12">
 						<div class="form-group mb-2">
 							<label class="form-control-label" for="input-nama">Link tujuan <span class="text-danger">*</span></label>
+							<div class="alert alert-light py-2" role="alert">
+								Tuliskan link secara lengkap. Contoh: <span class="alert-link">https://tujuan.com/</span>
+							</div>
 							<input type="text" name="link" class="form-control" placeholder="Cantumkan link pada kolom" value="" required="">
 						</div>
 					</div>

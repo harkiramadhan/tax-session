@@ -61,6 +61,10 @@
                 <input type="text" class="form-control rounded rounded-pill py-3 px-4" name="wa" aria-describedby="" placeholder="082112xxxxxx" required>
             </div>
             <div class="mb-3">
+                <label for="" class="form-label">Tanggal Lahir</label>
+                <input type="date" class="form-control rounded rounded-pill py-3 px-4" name="tl" aria-describedby="" placeholder="Pilih tanggal lahirmu" required>
+            </div>
+            <div class="mb-3">
                 <label for="" class="form-label">Jenis Kelamin</label>
                 <select class="form-select rounded rounded-pill py-3 px-4" aria-label="" name="jenkel" required>
                     <option value="" selected disabled>Pilih sekarang</option>
