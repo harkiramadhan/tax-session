@@ -31,5 +31,4 @@ class Landing extends CI_Controller{
 		$this->load->view('layout/guest/footer', $var);
         
     }
-
 }

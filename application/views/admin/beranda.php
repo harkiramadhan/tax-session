@@ -52,44 +52,30 @@
             </div>
             <div class="card-body pt-0 p-3">
               <ul class="list-group">
+                <?php 
+                  foreach($pelatihan->result() as $row){ 
+                    $pesertaPelatihan = $this->M_Pelatihan->getPeserta($row->id)
+                ?>
                 <li class="list-group-item border d-flex justify-content-between ps-3 mb-3 py-3 border-radius-lg">
                   <div class="d-flex align-items-center">
                     <div class="icon icon-shape me-3 bg-gradient-dark shadow text-center">
                         <i class="fa fa-book fa-lg opacity-10" aria-hidden="true"></i>
                     </div>
                     <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Kelas Merapikan Jahitan yang ada di kaki</h6>
+                        <h6 class="mb-1 text-dark text-sm"><?= $row->judul ?></h6>
                         <span class="text-xs">
                         
-                        <i class="fa fa-user me-2" aria-hidden="true"></i>250 Peserta
+                        <i class="fa fa-user me-2" aria-hidden="true"></i><?= $pesertaPelatihan->num_rows() ?> Peserta
                         </span>
                     </div>
                   </div>
                   <div class="d-flex">
-                    <a href="<?= site_url('admin/pelatihan/peserta') ?>" class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
+                    <a href="<?= site_url('admin/pelatihan/participant/' . $row->id) ?>" class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
                         <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
                     </a>
                   </div>
                 </li>
-                <li class="list-group-item border d-flex justify-content-between ps-3 mb-3 py-3 border-radius-lg">
-                  <div class="d-flex align-items-center">
-                    <div class="icon icon-shape me-3 bg-gradient-dark shadow text-center">
-                        <i class="fa fa-book fa-lg opacity-10" aria-hidden="true"></i>
-                    </div>
-                    <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Kelas Merapikan Jahitan yang ada di kaki</h6>
-                        <span class="text-xs">
-                        
-                        <i class="fa fa-user me-2" aria-hidden="true"></i>250 Peserta
-                        </span>
-                    </div>
-                  </div>
-                  <div class="d-flex">
-                    <a href="<?= site_url('admin/pelatihan/peserta') ?>" class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto">
-                        <i class="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </li>
+                <?php } ?>
               </ul>
                 <p class="mb-0 text-center">
                     <a class="mb-0 text-warning icon-move-right" href="<?= site_url('admin/pelatihan/') ?>">Tampilkan semua

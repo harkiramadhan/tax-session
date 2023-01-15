@@ -108,6 +108,7 @@ class Pelatihan extends CI_Controller{
                 $dataInsert = [
                     'pelatihan_id' => $this->input->post('pelaid', TRUE),
                     'nama' => $this->input->post('nama', TRUE),
+                    'tl' => $this->input->post('tl', TRUE),
                     'email' => $this->input->post('email', TRUE),
                     'wa' => $this->input->post('wa', TRUE),
                     'jenkel' => $this->input->post('jenkel', TRUE),

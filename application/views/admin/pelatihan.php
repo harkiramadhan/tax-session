@@ -84,7 +84,7 @@
                                     </td>
                                     <td class="align-top">
                                         <div class="ms-auto text-center">
-                                            <a class="btn btn-link btn-sm py-0 text-info px-2 mb-0" href="<?= site_url('pelatihan/' . $row->flag) ?>" target="__BLANK"><i class="far fa-eye" aria-hidden="true"></i></a>
+                                            <a class="btn btn-link btn-sm py-0 text-info px-2 mb-0" href="<?= site_url('pelatihan/' . $row->flag . '/detail') ?>" target="__BLANK"><i class="far fa-eye" aria-hidden="true"></i></a>
                                             <button type="button" class="btn btn-link btn-sm py-0 text-danger px-2 mb-0 btn-remove" data-id="<?= $row->id ?>"><i class="far fa-trash-alt" aria-hidden="true"></i></button>
                                             <a class="btn btn-link btn-sm py-0 text-dark px-2 mb-0" href="<?= site_url('admin/pelatihan/edit/' . $row->id) ?>"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
                                         </div>

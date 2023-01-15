@@ -17,7 +17,7 @@ class Beranda extends CI_Controller {
 
 		$var = [
 			'title' => 'Dashboard',
-			'pelatihan' => $this->M_Pelatihan->getAll()
+			'pelatihan' => $this->M_Pelatihan->getActive()
 		];
 		$this->load->view('layout/admin/header', $var);
 		$this->load->view('admin/beranda', $var);
