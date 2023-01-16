@@ -78,7 +78,7 @@
 				<h6 class="modal-title" id="tambahBanner">TAMBAH BANNER</h6>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
-			<form action="<?= site_url('admin/bannersa/create') ?>" enctype="multipart/form-data" method="post">
+			<form action="<?= site_url('admin/banners/create') ?>" enctype="multipart/form-data" method="post">
 			<div class="modal-body bg-gray-100">
 				<div class="row">
 					<div class="col-lg-12">
