@@ -37,7 +37,7 @@
 											<img src="<?= base_url('uploads/banners/' . $row->img) ?>" class="avatar avatar-lg me-3" alt="user1" style="object-fit: cover;">
 										</div>
 										<div class="d-flex flex-column justify-content-center">
-											<h6 class="mb-2 text-sm wrap-table-argon">Tax Session</h6>
+											<h6 class="mb-2 text-sm wrap-table-argon"><?= $row->judul ?></h6>
 											<a href="<?= $row->link ?>"class="text-xs font-weight-bold mb-0" target="__BLANK">
 												<i class="fa fa-link me-2 text-success" aria-hidden="true"></i>
 												<span class="text-dark">Link tujuan</span>

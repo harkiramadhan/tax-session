@@ -4,7 +4,8 @@ class Pelatihan extends CI_Controller{
         parent::__construct();
 
         $this->load->model([
-            'M_Pelatihan'
+            'M_Pelatihan',
+            'M_Fasilitas'
         ]);
     }
 
@@ -41,6 +42,7 @@ class Pelatihan extends CI_Controller{
         $var = [
             'title' => 'Detail Pelatihan ' . $pelatihan->judul,
             'pelatihan' => $pelatihan,
+            'fasilitas' => $this->M_Fasilitas->getByClass($pelatihan->id),
             'setting' => $this->db->get_where('settings', ['id' => 1])->row(),
         ];
 

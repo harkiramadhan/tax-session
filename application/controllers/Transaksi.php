@@ -55,19 +55,6 @@ class Transaksi extends CI_Controller{
                             <p class="mb-2"><?= $tanggal." - ".$row->waktu ?></p>
                             <p class="mb-2">
                                 <span class="mb-2 px-3 py-1 text-<?= ($row->status_bayar == 1) ? 'bg-success' : 'bg-danger' ?> rounded-pill <?= ($row->status_bayar == 1) ? 'bg-success' : 'bg-danger' ?>" style="width: fit-content;"><?= ($row->status_bayar == 1) ? 'Pembayaran Lunas' : 'Menunggu Pembayaran' ?></span> 
-                                <span class="weight-semi ms-1">
-                                    <?php 
-                                        if($row->status_kegiatan == 1){
-                                            echo "Kelas Belum Berjalan";
-                                        }elseif($row->status_kegiatan == 2){
-                                            echo "Kelas Sedang Berjalan";
-                                        }elseif($row->status_kegiatan == 3){
-                                            echo "Kelas Sudah Berjalan";
-                                        }elseif($row->status_kegiatan == 4){
-                                            echo "Kelas Telah Selesai";
-                                        }
-                                    ?>
-                                </span>
                             </p>
                         </div>
                         <div class="ms-auto d-flex justify-item-cente align-items-center">

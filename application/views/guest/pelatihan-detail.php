@@ -83,18 +83,12 @@
     
                             <p class="font-16 weight-bold mb-2">Apa yang akan kamu dapat</p>
                             <ul class="detail-info">
+                                <?php foreach($fasilitas->result() as $fp){ ?>
                                 <li class="detail-info-item mb-2">
-                                    <div class="material-symbols-outlined">videocam</div>
-                                    <p class="mb-0 ms-3 font-16">Rekaman Pelatihan</p>
+                                    <h5 style="color: #751119"><i class="<?= $fp->icon ?>"></i></h5>
+                                    <p class="mb-0 ms-3 font-16"><?= $fp->fasilitas ?></p>
                                 </li>
-                                <li class="detail-info-item mb-2">
-                                    <div class="material-symbols-outlined">newspaper</div>
-                                    <p class="mb-0 ms-3 font-16">E-Materi</p>
-                                </li>
-                                <li class="detail-info-item mb-2">
-                                    <div class="material-symbols-outlined">sell</div>
-                                    <p class="mb-0 ms-3 font-16">Free Akses</p>
-                                </li>
+                                <?php } ?>
                             </ul>
     
                             <hr class="my-1 border-top">

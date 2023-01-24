@@ -79,6 +79,15 @@
         </li>
 
         <li class="nav-item">
+            <a class="nav-link <?= ($this->uri->segment(2) == "fasilitas") ? 'active' : '' ?>" href="<?= site_url('admin/fasilitas') ?>">
+                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="fas fa-book text-primary text-lg" style="top:1px;"></i> 
+                </div>
+                <span class="nav-link-text ms-1">Fasilitas</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link <?= ($this->uri->segment(2) == "pelatihan") ? 'active' : '' ?>" href="<?= site_url('admin/pelatihan') ?>">
                 <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                     <i class="fas fa-book text-primary text-lg" style="top:1px;"></i> 

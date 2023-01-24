@@ -8,7 +8,10 @@ class Pelatihan extends CI_Controller {
 		parent::__construct();
 		$this->load->library('image_lib');
 
-		$this->load->model('M_Pelatihan');
+		$this->load->model([
+			'M_Pelatihan',
+			'M_Fasilitas'
+		]);
 		if($this->session->userdata('masuk') != TRUE)
 			redirect('admin','refresh');
 	}
@@ -44,6 +47,7 @@ class Pelatihan extends CI_Controller {
     function add(){
 		$var = [
 			'title' => 'Tambah Pelatihan Baru',
+			'fasilitas' => $this->M_Fasilitas->getAll(),
 			'ajax'	=> [
 				'pelatihan-add'
 			]
@@ -57,6 +61,8 @@ class Pelatihan extends CI_Controller {
         $var = [
 			'title' => 'Ubah Pelatihan',
 			'pelatihan' => $this->M_Pelatihan->getById($id),
+			'fasilitas' => $this->M_Fasilitas->getAll(),
+			'fasilitas_kelas' => $this->M_Fasilitas->getByClass($id),
 			'ajax' => [
 				'pelatihan-edit'
 			]
@@ -235,6 +241,8 @@ class Pelatihan extends CI_Controller {
 
 	/* Action */
 	function create(){
+		$this->output->set_content_type('application/json')->set_output(json_encode($this->input->post()));
+		
 		$filename = NULL;
 		$config['upload_path'] = './uploads/pelatihan';  
 		$config['allowed_types'] = 'jpg|jpeg|png'; 
@@ -265,6 +273,14 @@ class Pelatihan extends CI_Controller {
 		];
 		$this->db->insert('pelatihan', $dataInsert);
 		if($this->db->affected_rows() > 0){
+			$pelatihanid = $this->db->insert_id();
+			$fasilitas = $this->input->post('fasilitasid[]', TRUE);
+			foreach($fasilitas as $f){
+				$this->db->insert('fasilitas_pelatihan', [
+					'pelatihan_id' => $pelatihanid,
+					'fasilitas_id' => $f
+				]);
+			}
 			$this->session->set_flashdata('success', "Menambahkan Pelatihan");
 		}else{
 			$this->session->set_flashdata('error', "Menambahkan Pelatihan");
@@ -306,6 +322,16 @@ class Pelatihan extends CI_Controller {
 			'deskripsi' => $this->input->post('deskripsi', TRUE)
 		];
 		$this->db->where('id', $id)->update('pelatihan', $dataUpdate);
+		$fasilitas = $this->input->post('fasilitasid[]', TRUE);
+		$this->db->where('pelatihan_id', $id)->delete('fasilitas_pelatihan');
+		if(is_countable($fasilitas) && count($fasilitas) > 0){
+			foreach($fasilitas as $f){
+				$this->db->insert('fasilitas_pelatihan', [
+					'pelatihan_id' => $id,
+					'fasilitas_id' => $f
+				]);
+			}
+		}
 		if($this->db->affected_rows() > 0){
 			$this->session->set_flashdata('success', "Menyimpan Pelatihan");
 		}else{
