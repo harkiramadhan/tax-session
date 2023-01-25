@@ -6,7 +6,7 @@ $(document).ready(function(){
         slidesToScroll: 1,
         // variableWidth: true,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
         arrows: false,
         responsive: [
             {

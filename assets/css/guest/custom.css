@@ -97,8 +97,8 @@
 
 .list-partner .slick-slide {
     display: flex !important;
-    justify-content: center;
-    width: 100px;
+    justify-content: space-between;
+    /* width: 100px; */
 }
 
 .list-banner {

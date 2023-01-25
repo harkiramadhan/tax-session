@@ -25,7 +25,7 @@
 
 <!-- PATNER LOGO -->
 <section id="partner" class="container container-extend py-5">
-    <div class="list-partner d-flex justify-content-around align-items-center">
+    <div class="list-partner">
         <?php foreach($partners->result() as $pr){ ?>
             <a href="<?= $pr->link ?>" target="_blank">
                 <img src="<?= base_url('uploads/partner/' . $pr->img) ?>" alt="">
