@@ -3,17 +3,20 @@
     <div class="container container-extend">
 
         <div class="row">
-            <div class="col-lg-6 d-flex align-items-center">
+            <div class="col-lg-7 d-flex align-items-center">
 
-                <div class="mx-lg-5 mx-3 pt-4 justify-items-start">
-                    <p class="text-uppercase text-white">We provide tons of pathskill</p>
-                    <h1 class="text-white"><span class="weight-bolder">The New</span> Way <br> to Achieve <span class="weight-bolder">Good Skills</span></h1>
-                    <p class="text-white mb-3">We provide tons of pathskill that you <br> can choose and focus on</p>
+                <div class="mx-lg-5 mx-3 pt-4 pb-5 justify-items-start">
+                    <!-- <p class="text-uppercase text-white">Indonesian Tax Education Center</p> -->
+                    <h1 class="text-white">Indonesian <span class="weight-bold">Tax <br> Education</span> Center</h1>
+                    <p class="text-white mb-3 text-justify"> <span class="weight-semi">Kami menyediakan pendidikan pajak antara lain:</span> <br> Beginners (Dasar-dasar pajak), Brevet Akuntansi Pajak, Perencanaan Pajak, Pemeriksaan Pajak, Bukti Permulaan & Penyidikan KUP, PPh 21, PPh 23, PPh 26, PPh Badan, PPN</p>
+                    <p class="text-white mb-3 weight-light font-14">Yang dibawakan oleh para instruktur berkualitas yang memiliki keahlian yang sesuai dengan bidangnya seperti praktisi perpajakan dan akademisi.</p>
                     <a class="btn btn-light btn-icon-session rounded-pill d-flex align-items-center px-1 ps-3" href="<?= site_url('pelatihan') ?>" style="width: fit-content;">Lebih Lanjut<span class="material-symbols-outlined ms-3">arrow_forward</span></a>
                 </div>
+                <br>
+                <br>
                 
             </div>
-            <div class="col-lg-6 d-flex justify-content-center">
+            <div class="col-lg-5 d-flex justify-content-center">
                 <img src="<?= base_url('/assets/img/guest/img-header-main.svg') ?>" alt="" class="w-75">
             </div>
         </div>
