@@ -82,7 +82,7 @@
 <!-- BENEFIT PELATIHAN DONE -->
 
 <!-- STATISTIK -->
-<section id="pelatihan">
+<!-- <section id="pelatihan">
     <div class="container container-extend py-5">
         <div class="row">
             <div class="col-lg-6 d-flex justify-content-center d-lg-block d-none">
@@ -126,7 +126,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- STATISTIK DONE -->
 
 <!-- DAFTAR PELATIHAN -->
@@ -199,7 +199,7 @@
 <!-- FAQ DONE -->
 
 <!-- TESTIMONI  -->
-<section id="testimoni">
+<!-- <section id="testimoni">
     <div class="container container-extend py-5">
         <div class="head-section mb-4">
             <p class="text-uppercase mb-0">We provide tons of pathskill</p>
@@ -222,7 +222,7 @@
             <?php } ?>
         </div>
     </div>
-</section>
+</section> -->
 <!-- TESTIMONI DONE -->
 
 <!-- PERTANYAAN -->
