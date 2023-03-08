@@ -63,7 +63,7 @@
                 $no = 1;
                 foreach($benefits->result() as $bnr){ 
             ?>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="card-benefit card border p-3 mb-lg-0 mb-4" <?= ($no == 2) ? 'style="background: #751119;"' : '' ?>>
                         <div class="card-body">
                             <img class="mb-5 <?= ($no == 2) ? 'text-white' : '' ?>" src="<?= base_url('uploads/benefit/' . $bnr->img) ?>" alt="">
